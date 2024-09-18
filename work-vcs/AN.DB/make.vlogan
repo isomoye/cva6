@@ -1,0 +1,77 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -full64 -sverilog -ntb_opts uvm-1.2 +incdir+/tools/synopsys/vcs/S-2021.09-SP1//etc/uvm/vcs/wrap +incdir+/tools/synopsys/vcs/S-2021.09-SP1//etc/uvm-1.2 +define+ +incdir+/tools/C/eegr-463/idris.somoye/cva6/vendor/pulp-platform/common_cells/include/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/vendor/pulp-platform/axi/include/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/corev_apu/register_interface/include/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/common/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/vendor/pulp-platform/axi/include/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/verif/core-v-verif/lib/uvm_agents/uvma_rvfi/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/verif/core-v-verif/lib/uvm_components/uvmc_rvfi_reference_model/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/verif/core-v-verif/lib/uvm_components/uvmc_rvfi_scoreboard/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/verif/core-v-verif/lib/uvm_agents/uvma_core_cntrl/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/verif/tb/core/ +incdir+/tools/C/eegr-463/idris.somoye/cva6/core/include/ +incdir+/tools/m_spike/include/disasm/ -sverilog +define+UVM_DIRECTC_OPTS -full64
+
+all :		_VCSgd_5xEJFb_1.db \
+	_VCSgd_2L14kb_1.db \
+	_VCSgd_HKTXY_1.db \
+	_VCSgd_Nipfqd_1.db \
+	_VCSgd_PWxUNb_1.db \
+	_VCSgd_R4kEp_1.db \
+	_VCSgd_ki3Bbc_1.db \
+	_VCSgd_9DRXyd_1.db \
+	_VCSgd_depvec_1.db \
+	_VCSgd_GiSVF_1.db \
+	_VCSgd_PWMRp_1.db \
+	_VCSgd_HFbWr_1.db \
+	_VCSgd_UsWXxd_1.db \
+	_VCSgd_d9GpIb_1.db \
+
+
+
+_VCSgd_5xEJFb_1.db :	/tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_tb.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_tb.sv
+
+
+_VCSgd_2L14kb_1.db :	/tools/C/eegr-463/idris.somoye/cva6/core/include/config_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/core/include/config_pkg.sv
+
+
+_VCSgd_HKTXY_1.db :	/tools/C/eegr-463/idris.somoye/cva6/core/include/cv64a6_imafdc_sv39_config_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/core/include/cv64a6_imafdc_sv39_config_pkg.sv
+
+
+_VCSgd_Nipfqd_1.db :	/tools/C/eegr-463/idris.somoye/cva6/core/include/riscv_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/core/include/riscv_pkg.sv
+
+
+_VCSgd_PWxUNb_1.db :	/tools/C/eegr-463/idris.somoye/cva6/core/include/ariane_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/core/include/ariane_pkg.sv
+
+
+_VCSgd_R4kEp_1.db :	/tools/synopsys/vcs/S-2021.09-SP1//etc/uvm-1.2/uvm_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/synopsys/vcs/S-2021.09-SP1//etc/uvm-1.2/uvm_pkg.sv
+
+
+_VCSgd_ki3Bbc_1.db :	/tools/C/eegr-463/idris.somoye/cva6/core/include/build_config_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/core/include/build_config_pkg.sv
+
+
+_VCSgd_9DRXyd_1.db :	/tools/C/eegr-463/idris.somoye/cva6/corev_apu/riscv-dbg/src/dm_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/corev_apu/riscv-dbg/src/dm_pkg.sv
+
+
+_VCSgd_depvec_1.db :	/tools/C/eegr-463/idris.somoye/cva6/vendor/pulp-platform/axi/src/axi_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/vendor/pulp-platform/axi/src/axi_pkg.sv
+
+
+_VCSgd_GiSVF_1.db :	/tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_axi_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_axi_pkg.sv
+
+
+_VCSgd_PWMRp_1.db :	/tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_soc_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_soc_pkg.sv
+
+
+_VCSgd_HFbWr_1.db :	/tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_axi_soc_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_axi_soc_pkg.sv
+
+
+_VCSgd_UsWXxd_1.db :	/tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_testharness.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/corev_apu/tb/ariane_testharness.sv
+
+
+_VCSgd_d9GpIb_1.db :	/tools/C/eegr-463/idris.somoye/cva6/core/cva6_rvfi.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /tools/C/eegr-463/idris.somoye/cva6/core/cva6_rvfi.sv
+
+
