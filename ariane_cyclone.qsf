@@ -1,0 +1,206 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 2020  Intel Corporation. All rights reserved.
+# Your use of Intel Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Intel Program License 
+# Subscription Agreement, the Intel Quartus Prime License Agreement,
+# the Intel FPGA IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Intel and sold by Intel or its authorized distributors.  Please
+# refer to the applicable agreement for further details, at
+# https://fpgasoftware.intel.com/eula.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus Prime
+# Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+# Date created = 11:30:35  September 07, 2024
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ariane_cyclone_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus Prime software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name TOP_LEVEL_ENTITY ariane
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.0
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:30:34  SEPTEMBER 07, 2024"
+set_global_assignment -name LAST_QUARTUS_VERSION "20.1.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 256
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_timing
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_symbol
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_signal_integrity
+set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
+set_global_assignment -name SEARCH_PATH core/include/
+set_global_assignment -name SEARCH_PATH "vendor/pulp-platform/common_cells/include/"
+set_global_assignment -name SEARCH_PATH common/local/util/
+set_global_assignment -name SEARCH_PATH corev_apu/register_interface/include/
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE core/include/cv64a6_imafdc_sv39_openpiton_config_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/include/riscv_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dm_pkg.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/include/ariane_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/tb/ariane_soc_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/axi/src/axi_pkg.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/tb/ariane_axi_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/include/wt_cache_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/tb/axi_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/cf_math_pkg.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE core/include/instr_tracer_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvxif_example/include/cvxif_instr_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/acc_dispatcher.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/rv_plic/rtl/rv_plic_reg_pkg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/local/util/sram.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/deprecated/rrarbiter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/deprecated/fifo_v1.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/deprecated/fifo_v2.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/fifo_v3.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/shift_reg.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/lfsr_8bit.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/lfsr.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/lzc.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/exp_backoff.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/rr_arb_tree.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/rstgen_bypass.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/cdc_2phase.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/unread.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/popcount.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/axi_mem_if/src/axi2mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE common/local/util/tc_sram_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/axi_adapter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/fpu_wrap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/src/ariane.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cva6.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/branch_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/compressed_decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/csr_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/csr_regfile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/ex_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/frontend/btb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/frontend/bht.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/frontend/ras.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/frontend/instr_scan.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/frontend/instr_queue.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/frontend/frontend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/id_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/instr_realign.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/issue_read_operands.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/issue_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/load_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/load_store_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/lsu_bypass.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cva6_mmu/cva6_mmu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cva6_mmu/cva6_ptw.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cva6_mmu/cva6_shared_tlb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cva6_mmu/cva6_tlb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/mult.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/multiplier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/serdiv.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/perf_counters.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/ariane_regfile_ff.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/scoreboard.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/store_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/amo_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/store_unit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/commit_stage.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/wt_dcache_ctrl.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/wt_dcache_mem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/wt_dcache_missunit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/wt_dcache_wbuffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/wt_dcache.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/cva6_icache.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/cva6_icache_axi_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/wt_l15_adapter.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/wt_cache_subsystem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/clint/clint.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/clint/axi_lite_interface.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/debug_rom/debug_rom.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dm_csrs.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dm_mem.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dm_top.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dmi_cdc.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dmi_jtag.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dm_sba.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "corev_apu/riscv-dbg/src/dmi_jtag_tap.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/openpiton/riscv_peripherals.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/openpiton/ariane_verilog_wrap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/rv_plic/rtl/rv_plic_target.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/rv_plic/rtl/rv_plic_gateway.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/rv_plic/rtl/plic_regmap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/rv_plic/rtl/plic_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi2apb/src/axi2apb_wrap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi2apb/src/axi2apb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi2apb/src/axi2apb_64_32.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_w_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_b_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_slice_wrap.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_slice.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_single_slice.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_ar_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_r_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/fpga/src/axi_slice/src/axi_aw_buffer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/register_interface/src/apb_to_reg.sv
+set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/register_interface/src/reg_intf.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/defs_div_sqrt_mvp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/div_sqrt_mvp_wrapper.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/div_sqrt_top_mvp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/iteration_div_sqrt_mvp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/norm_div_sqrt_mvp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/nrbd_nrsc_mvp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_cast_multi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_classifier.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_divsqrt_multi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_fma_multi.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_fma.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_noncomp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_opgroup_block.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_opgroup_fmt_slice.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_opgroup_multifmt_slice.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_rounding.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvfpu/src/fpnew_top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/pmp/src/pmp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/pmp/src/pmp_entry.sv
+set_global_assignment -name SYSTEMVERILOG_FILE common/local/util/instr_tracer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvxif_example/cvxif_example_coprocessor.sv
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvxif_example/instr_decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/counter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/common_cells/src/delta_counter.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE core/cvxif_fu.sv
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
