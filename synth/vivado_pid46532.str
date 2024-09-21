@@ -1,0 +1,698 @@
+/*
+
+Xilinx Vivado v2022.1 (64-bit) [Major: 2022, Minor: 1]
+SW Build: 3526262 on Mon Apr 18 15:47:01 MDT 2022
+IP Build: 3524634 on Mon Apr 18 20:55:01 MDT 2022
+
+Process ID (PID): 46532
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sat Sep 21 00:49:59 EDT 2024
+Time zone: 	Eastern Standard Time (America/New_York)
+
+OS: Red Hat Enterprise Linux Server release 7.9 (Maipo)
+OS Version: 3.10.0-1160.105.1.el7.x86_64
+OS Architecture: amd64
+Available processors (cores): 128
+
+Display: localhost:10.0
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.11 64-bit
+Java home: 	/tools/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9
+Java executable: 	/tools/Xilinx/Vivado/2022.1/tps/lnx64/jre11.0.11_9/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Xverify:none, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, --add-opens=java.desktop/com.sun.awt=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=60m, -XX:MaxNewSize=60m, -Xms256m, -Xmx3072m, -Xss5m, -Xrs]
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	idris.somoye
+User home directory: /home/MSUCAP/idris.somoye
+User working directory: /tools/C/eegr-463/idris.somoye/test_clone/synth
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2022.1
+RDI_DATADIR: /tools/Xilinx/Vivado/2022.1/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2022.1/bin
+
+Vivado preferences file: /home/MSUCAP/idris.somoye/.Xilinx/Vivado/2022.1/vivado.xml
+Vivado preferences directory: /home/MSUCAP/idris.somoye/.Xilinx/Vivado/2022.1/
+Vivado layouts directory: /home/MSUCAP/idris.somoye/.Xilinx/Vivado/2022.1/data/layouts
+PlanAhead jar file: 	/tools/Xilinx/Vivado/2022.1/lib/classes/planAhead.jar
+Vivado log file: 	/tools/C/eegr-463/idris.somoye/test_clone/synth/vivado.log
+Vivado journal file: 	/tools/C/eegr-463/idris.somoye/test_clone/synth/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-46532-capc-cl1-1.msucap.com
+
+Xilinx Environment Variables
+----------------------------
+MYVIVADO: /tools/Xilinx
+VIVADO_PATH: /tools/Xilinx/Vivado/2022.1
+XILINX: /tools/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2022.1/ids_lite/ISE
+XILINX_HLS: /tools/Xilinx/Vitis_HLS/2022.1
+XILINX_PATH: /tools/Xilinx
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2022.1
+XILINX_VITIS: 
+XILINX_VIVADO: /tools/Xilinx/Vivado/2022.1
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2022.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 6,118 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 72 MB (+72631kb) [00:00:09]
+// [Engine Memory]: 6,111 MB (+6256544kb) [00:00:09]
+// Opening Vivado Project: ../corev_apu/fpga/ariane.xpr. Version: Vivado v2022.1 
+// WARNING: HEventQueue.dispatchEvent() is taking  5259 ms.
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HTimer (HSTRUtils Dump STR Log Timer) is taking 994ms to process. Increasing delay to 5000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 6,118 MB. GUI used memory: 55 MB. Current time: 9/21/24, 12:50:00 AM EDT
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: MSGMGR_REFRESH_MSG
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project ../corev_apu/fpga/ariane.xpr 
+// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.gen/sources_1'. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 77 MB (+1701kb) [00:00:18]
+// [GUI Memory]: 81 MB (+514kb) [00:00:18]
+// [GUI Memory]: 96 MB (+11444kb) [00:00:19]
+// WARNING: HEventQueue.dispatchEvent() is taking  1466 ms.
+// Project name: ariane; location: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga; part: xc7k325tffg900-2
+dismissDialog("Open Project"); // bA
+// [GUI Memory]: 117 MB (+16395kb) [00:00:21]
+// [GUI Memory]: 124 MB (+1708kb) [00:00:23]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 131 MB (+615kb) [00:00:32]
+// HMemoryUtils.trashcanNow. Engine heap size: 6,279 MB. GUI used memory: 72 MB. Current time: 9/21/24, 12:50:17 AM EDT
+// Elapsed time: 27 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv)]", 4); // D
+// Elapsed time: 37 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 24); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 28); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 28); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 28); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 28); // D
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_pkg (ariane_pkg.sv)]", 25); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_pkg (ariane_pkg.sv), riscv (riscv_pkg.sv)]", 27); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_pkg (ariane_pkg.sv), cva6_config_pkg (cv64a6_imafdc_sv39_config_pkg.sv)]", 30); // D
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 24, true); // D - Node
+// [GUI Memory]: 139 MB (+1403kb) [00:02:43]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 24, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // ao
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ao
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ar
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top ariane [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// WARNING: HTimer (FileMgr Design Graph Update Timer) is taking 433ms to process. Increasing delay to 3000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 6,309 MB. GUI used memory: 76 MB. Current time: 9/21/24, 12:52:37 AM EDT
+// Elapsed time: 10 seconds
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 24); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 24); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cvxif_coprocessor : cvxif_example_coprocessor (cvxif_example_coprocessor.sv)]", 35); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cvxif_coprocessor : cvxif_example_coprocessor (cvxif_example_coprocessor.sv), i_copro_alu : copro_alu (copro_alu.sv)]", 39); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cvxif_coprocessor : cvxif_example_coprocessor (cvxif_example_coprocessor.sv)]", 35); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 34); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 34); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_axi (ariane_axi_pkg.sv)]", 33); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_axi (ariane_axi_pkg.sv), cva6_config_pkg (cv64a6_imafdc_sv39_config_pkg.sv)]", 34); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_axi (ariane_axi_pkg.sv), cva6_config_pkg (cv64a6_imafdc_sv39_config_pkg.sv)]", 34); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_axi (ariane_axi_pkg.sv)]", 33); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), ariane_pkg (ariane_pkg.sv)]", 25); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // n
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// WARNING: HEventQueue.dispatchEvent() is taking  1644 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  12005 ms.
+// Thread: TimerQueue
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+// 	at java.base@11.0.11/java.util.concurrent.DelayQueue.take(DelayQueue.java:229)
+// 	at java.desktop@11.0.11/javax.swing.TimerQueue.run(TimerQueue.java:171)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: SyntheticaAnimation 25
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Java2D Disposer
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.desktop@11.0.11/sun.java2d.Disposer.run(Disposer.java:144)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: SyntheticaAnimation 70
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Monitor HEventQueue Thread
+// 	at java.base@11.0.11/java.lang.Thread.dumpThreads(Native Method)
+// 	at java.base@11.0.11/java.lang.Thread.getAllStackTraces(Thread.java:1653)
+// 	at ui.utils.d.c.ieu(SourceFile:589)
+// 	at ui.frmwork.a.e.aXK(SourceFile:144)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Common-Cleaner
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:148)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// 	at java.base@11.0.11/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:134)
+// Thread: Thread-18
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.k.c.z.hWs(SourceFile:144)
+// 	at ui.k.c.z$$Lambda$286/0x000000080087a840.run(Unknown Source)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: hw_ila_monitor
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.Object.wait(Object.java:328)
+// 	at java.base@11.0.11/java.util.TimerThread.mainLoop(Timer.java:527)
+// 	at java.base@11.0.11/java.util.TimerThread.run(Timer.java:506)
+// Thread: Protocol translation thread 0
+// 	at java.base@11.0.11/java.net.SocketInputStream.socketRead0(Native Method)
+// 	at java.base@11.0.11/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+// 	at java.base@11.0.11/java.net.SocketInputStream.read(SocketInputStream.java:168)
+// 	at java.base@11.0.11/java.net.SocketInputStream.read(SocketInputStream.java:140)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:478)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:472)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1364)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:973)
+// 	at java.base@11.0.11/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:880)
+// 	at com.sigasi.hdt.epl.lsp4j.PatchedStreamMessageProducer.listen(PatchedStreamMessageProducer.java:79)
+// 	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+// 	at java.base@11.0.11/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+// 	at java.base@11.0.11/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: pool-2-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.11/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: AWT-Shutdown
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.Object.wait(Object.java:328)
+// 	at java.desktop@11.0.11/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Thread-1
+// Thread: pool-4-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.11/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Reference Handler
+// 	at java.base@11.0.11/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.Reference.processPendingReferences(Reference.java:241)
+// 	at java.base@11.0.11/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:213)
+// Thread: pool-3-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081)
+// 	at java.base@11.0.11/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: AWT-EventQueue-0
+// 	at java.desktop@11.0.11/sun.java2d.loops.TransformHelper.Transform(Native Method)
+// 	at java.desktop@11.0.11/sun.java2d.pipe.DrawImage.renderImageXform(DrawImage.java:499)
+// 	at java.desktop@11.0.11/sun.java2d.pipe.DrawImage.transformImage(DrawImage.java:264)
+// 	at java.desktop@11.0.11/sun.java2d.pipe.DrawImage.scaleImage(DrawImage.java:777)
+// 	at java.desktop@11.0.11/sun.java2d.pipe.DrawImage.scaleImage(DrawImage.java:1081)
+// 	at java.desktop@11.0.11/sun.java2d.SunGraphics2D.drawImage(SunGraphics2D.java:3514)
+// 	at java.desktop@11.0.11/sun.java2d.SunGraphics2D.drawImage(SunGraphics2D.java:3455)
+// 	at de.javasoft.plaf.synthetica.painter.ImagePainter.drawImage(ImagePainter.java:799)
+// 	at de.javasoft.plaf.synthetica.painter.ImagePainter.drawTopCenter(ImagePainter.java:667)
+// 	at de.javasoft.plaf.synthetica.painter.ImagePainter.drawBorder(ImagePainter.java:542)
+// 	at de.javasoft.plaf.synthetica.painter.ImagePainter.draw(ImagePainter.java:531)
+// 	at de.javasoft.plaf.synthetica.painter.ButtonPainter.drawButton(ButtonPainter.java:208)
+// 	at de.javasoft.plaf.synthetica.painter.ButtonPainter.paintButtonBackground(ButtonPainter.java:199)
+// 	at de.javasoft.plaf.synthetica.painter.ButtonPainter.paintButtonBackground(ButtonPainter.java:120)
+// 	at de.javasoft.plaf.synthetica.painter.ButtonPainter.paintButtonBackground(ButtonPainter.java:100)
+// 	at de.javasoft.plaf.synthetica.painter.SyntheticaPainter.paintButtonBackground(SyntheticaPainter.java:192)
+// 	at java.desktop@11.0.11/javax.swing.plaf.synth.SynthButtonUI.paintBackground(SynthButtonUI.java:294)
+// 	at java.desktop@11.0.11/javax.swing.plaf.synth.SynthButtonUI.update(SynthButtonUI.java:251)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintComponent(JComponent.java:797)
+// 	at ui.utils.swing.b.s.paintComponent(SourceFile:29)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1074)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at ui.utils.r.e.paint(SourceFile:141)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/javax.swing.JLayeredPane.paint(JLayeredPane.java:590)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paintChildren(JComponent.java:907)
+// 	at java.desktop@11.0.11/javax.swing.JComponent.paint(JComponent.java:1083)
+// 	at java.desktop@11.0.11/java.awt.GraphicsCallback$PaintCallback.run(GraphicsCallback.java:39)
+// 	at java.desktop@11.0.11/sun.awt.SunGraphicsCallback.runOneComponent(SunGraphicsCallback.java:78)
+// 	at java.desktop@11.0.11/sun.awt.SunGraphicsCallback.runComponents(SunGraphicsCallback.java:115)
+// 	at java.desktop@11.0.11/java.awt.Container.paint(Container.java:2002)
+// 	at java.desktop@11.0.11/java.awt.Window.paint(Window.java:3940)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager$4.run(RepaintManager.java:876)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager$4.run(RepaintManager.java:848)
+// 	at java.base@11.0.11/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@11.0.11/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:848)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:823)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager.prePaintDirtyRegions(RepaintManager.java:772)
+// 	at java.desktop@11.0.11/javax.swing.RepaintManager$ProcessingRunnable.run(RepaintManager.java:1890)
+// 	at java.desktop@11.0.11/java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:313)
+// 	at java.desktop@11.0.11/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:770)
+// 	at java.desktop@11.0.11/java.awt.EventQueue$4.run(EventQueue.java:721)
+// 	at java.desktop@11.0.11/java.awt.EventQueue$4.run(EventQueue.java:715)
+// 	at java.base@11.0.11/java.security.AccessController.doPrivileged(Native Method)
+// 	at java.base@11.0.11/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:85)
+// 	at java.desktop@11.0.11/java.awt.EventQueue.dispatchEvent(EventQueue.java:740)
+// 	at ui.frmwork.a.d.dispatchEvent(SourceFile:92)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+// 	at java.desktop@11.0.11/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+// Thread: Refresh Filesets Swing Worker Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.design.z.aXK(SourceFile:2513)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Batik CleanerThread
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at org.apache.batik.util.CleanerThread.run(CleanerThread.java:106)
+// Thread: Attach Listener
+// Thread: Life support thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at com.sigasi.lcm.l.run(SourceFile:82)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: pool-6-thread-1
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+// 	at java.base@11.0.11/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+// 	at java.base@11.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+// 	at java.base@11.0.11/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: process reaper
+// 	at java.base@11.0.11/java.lang.ProcessHandleImpl.waitForProcessExit0(Native Method)
+// 	at java.base@11.0.11/java.lang.ProcessHandleImpl$1.run(ProcessHandleImpl.java:138)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+// 	at java.base@11.0.11/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: ForkJoinPool.commonPool-worker-229
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194)
+// 	at java.base@11.0.11/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628)
+// 	at java.base@11.0.11/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+// Thread: Watchdog Thread for com.sigasi.lsp.server.BootstrappedLspServer
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at com.sigasi.lcm.B.run(SourceFile:66)
+// Thread: ErrorGobbler
+// 	at java.base@11.0.11/java.io.FileInputStream.readBytes(Native Method)
+// 	at java.base@11.0.11/java.io.FileInputStream.read(FileInputStream.java:279)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+// 	at java.base@11.0.11/java.io.InputStreamReader.read(InputStreamReader.java:181)
+// 	at java.base@11.0.11/java.io.BufferedReader.fill(BufferedReader.java:161)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:326)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:392)
+// 	at java.base@11.0.11/java.io.BufferedReader$1.hasNext(BufferedReader.java:574)
+// 	at java.base@11.0.11/java.util.Iterator.forEachRemaining(Iterator.java:132)
+// 	at java.base@11.0.11/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+// 	at java.base@11.0.11/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+// 	at com.sigasi.lcm.C.run(SourceFile:43)
+// Thread: Update Runs Swing Worker Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.experiment.F.aXK(SourceFile:373)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: AWT-XAWT
+// 	at java.desktop@11.0.11/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+// 	at java.desktop@11.0.11/sun.awt.X11.XToolkit.run(XToolkit.java:684)
+// 	at java.desktop@11.0.11/sun.awt.X11.XToolkit.run(XToolkit.java:648)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: Process Messages Thread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.frmwork.c.h.aXK(SourceFile:133)
+// 	at ui.frmwork.y.run(SourceFile:206)
+// 	at java.base@11.0.11/java.lang.Thread.run(Thread.java:829)
+// Thread: EMF Reference Cleaner
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at org.eclipse.emf.common.util.CommonUtil$1ReferenceClearingQueuePollingThread.run(CommonUtil.java:70)
+// Thread: main
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at ui.PlanAhead.c(SourceFile:1160)
+// 	at ui.PlanAhead.jswMain(SourceFile:1207)
+// Thread: SyntheticaCleanerThread
+// 	at java.base@11.0.11/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.StyleFactory$ComponentPropertyStore$1.run(StyleFactory.java:1902)
+// Thread: OutputGobbler
+// 	at java.base@11.0.11/java.io.FileInputStream.readBytes(Native Method)
+// 	at java.base@11.0.11/java.io.FileInputStream.read(FileInputStream.java:279)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+// 	at java.base@11.0.11/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+// 	at java.base@11.0.11/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+// 	at java.base@11.0.11/java.io.InputStreamReader.read(InputStreamReader.java:181)
+// 	at java.base@11.0.11/java.io.BufferedReader.fill(BufferedReader.java:161)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:326)
+// 	at java.base@11.0.11/java.io.BufferedReader.readLine(BufferedReader.java:392)
+// 	at java.base@11.0.11/java.io.BufferedReader$1.hasNext(BufferedReader.java:574)
+// 	at java.base@11.0.11/java.util.Iterator.forEachRemaining(Iterator.java:132)
+// 	at java.base@11.0.11/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+// 	at java.base@11.0.11/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658)
+// 	at com.sigasi.lcm.C.run(SourceFile:43)
+// Thread: Finalizer
+// 	at java.base@11.0.11/java.lang.Object.wait(Native Method)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@11.0.11/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.base@11.0.11/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:170)
+// Thread: ForkJoinPool.commonPool-worker-87
+// 	at java.base@11.0.11/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@11.0.11/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:275)
+// 	at java.base@11.0.11/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1619)
+// 	at java.base@11.0.11/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+// WARNING: HEventQueue.dispatchEvent() is taking  1149 ms.
+// [GUI Memory]: 148 MB (+1822kb) [00:03:41]
+// Elapsed time: 19 seconds
+selectButton(PAResourceQtoS.SettingsProjectGeneralPage_CHOOSE_DEVICE_FOR_YOUR_PROJECT, (String) null); // s
+// [GUI Memory]: 160 MB (+4819kb) [00:03:44]
+// WARNING: HEventQueue.dispatchEvent() is taking  3972 ms.
+// [GUI Memory]: 215 MB (+49970kb) [00:03:49]
+// WARNING: HEventQueue.dispatchEvent() is taking  1366 ms.
+// Elapsed time: 11 seconds
+selectTreeTable(PAResourceAtoD.BoardChooser_BOARD_TABLE, "Genesys ZU-5EV ; Genesys ZU-5EV ; digilentinc.com ; 1.1 ; xczu5ev-sfvc784-1-e ; 784 ; C.0 ; 252 ; 117120 ; 234240 ; 144 ; 64 ; 1248 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 2 ; 4 ;  ; 0 ;  ;  ; 0 ;  ;  ; 0 ; 100 ; 100 ; E ; 0.825 ; 0.850 ; 0.876", 16, "Genesys ZU-5EV", 0, false); // ah
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// [GUI Memory]: 232 MB (+6377kb) [00:03:57]
+dismissDialog("Select Device"); // c
+// [GUI Memory]: 247 MB (+3500kb) [00:03:59]
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// WARNING: HEventQueue.dispatchEvent() is taking  3940 ms.
+// TclEventType: RUN_MODIFY
+// WARNING: HEventQueue.dispatchEvent() is taking  1045 ms.
+// TclEventType: RUN_MODIFY
+// Tcl Message: set_property board_part digilentinc.com:gzu_5ev:part0:1.1 [current_project] 
+// TclEventType: RUN_MODIFY
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PART_MODIFIED
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [Project 1-152] Project part set to zynquplus (xczu5ev-sfvc784-1-e) 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BOARD_MODIFIED
+// WARNING: HEventQueue.dispatchEvent() is taking  1116 ms.
+// Elapsed time: 11 seconds
+dismissDialog("Change Settings"); // bA
+dismissDialog("Settings"); // d
+// WARNING: HEventQueue.dispatchEvent() is taking  1055 ms.
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// WARNING: HEventQueue.dispatchEvent() is taking  3389 ms.
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// WARNING: HEventQueue.dispatchEvent() is taking  4080 ms.
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 64 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Sat Sep 21 00:54:14 2024] Launched synth_1... Run output will be captured here: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 10 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 24); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 24); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cvxif_coprocessor : cvxif_example_coprocessor (cvxif_example_coprocessor.sv)]", 29); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cvxif_coprocessor : cvxif_example_coprocessor (cvxif_example_coprocessor.sv)]", 29); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 28); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv), instr_tracer_i : xil_defaultlib.instr_tracer]", 48, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv), instr_tracer_i : xil_defaultlib.instr_tracer]", 48, false, false, false, false, false, true); // D - Double Click
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 28); // D
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv)]", 28); // D
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  4579 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1047 ms.
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3952] use of undefined macro 'READREGFLAGS_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:26]. ]", 2, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv;-;;-;16;-;line;-;26;-;;-;16;-;"); // ah
+// WARNING: HEventQueue.dispatchEvent() is taking  2307 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 6,336 MB. GUI used memory: 99 MB. Current time: 9/21/24, 12:55:02 AM EDT
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv), i_acc_dispatcher : acc_dispatcher (acc_dispatcher.sv)]", 47, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv), i_cva6 : cva6 (cva6.sv), i_acc_dispatcher : acc_dispatcher (acc_dispatcher.sv), cf_math_pkg (cf_math_pkg.sv)]", 52, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  4053 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2195 ms.
+dismissDialog("Opening Editor"); // bA
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3952] use of undefined macro 'READREGFLAGS_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:26]. ]", 2, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv;-;;-;16;-;line;-;26;-;;-;16;-;"); // ah
+// Elapsed time: 20 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3952] use of undefined macro 'READREGFLAGS_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:26]. ]", 2, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv;-;;-;16;-;line;-;26;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3952] use of undefined macro 'READREGFLAGS_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:26]. ]", 2, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv;-;;-;16;-;line;-;26;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3952] use of undefined macro 'READREGFLAGS_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:26]. ]", 2, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv;-;;-;16;-;line;-;26;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3952] use of undefined macro 'READREGFLAGS_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:26]. , [HDL 9-3952] use of undefined macro 'REG_BUS_ASSIGN_TO_REQ' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_peripherals_xilinx.sv:172]. ]", 4, false, false, false, false, false, true); // ah - Double Click
+// Elapsed time: 18 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Global Include]", 1); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Global Include]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, cvxif_types.svh]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header, cvxif_types.svh]", 4, false, false, false, false, true, false); // D - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_TO_PROJECT, "Add File to Project"); // ar
+// Run Command: PAResourceCommand.PACommandNames_ADD_TO_PROJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse /tools/C/eegr-463/idris.somoye/test_clone/core/include/cvxif_types.svh 
+// HMemoryUtils.trashcanNow. Engine heap size: 6,366 MB. GUI used memory: 97 MB. Current time: 9/21/24, 12:56:27 AM EDT
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // n
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// WARNING: HEventQueue.dispatchEvent() is taking  3780 ms.
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// WARNING: HEventQueue.dispatchEvent() is taking  3938 ms.
+// Elapsed time: 12 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// WARNING: HEventQueue.dispatchEvent() is taking  3525 ms.
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 64 
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: [Sat Sep 21 00:56:56 2024] Launched synth_1... Run output will be captured here: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.runs/synth_1/runme.log 
+// 'k' command handler elapsed time: 16 seconds
+dismissDialog("Starting Design Runs"); // bA
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  3610 ms.
+// Elapsed time: 41 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ag
+// WARNING: HEventQueue.dispatchEvent() is taking  1021 ms.
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-3952] use of undefined macro 'RVFI_PROBES_INSTR_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:202]. ]", 2, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv;-;;-;16;-;line;-;202;-;;-;16;-;"); // ah
+// WARNING: HEventQueue.dispatchEvent() is taking  2275 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 6,383 MB. GUI used memory: 101 MB. Current time: 9/21/24, 12:57:47 AM EDT
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 32, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 32, true, false, false, false, true, false); // D - Popup Trigger - Node
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // ao
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sources_1, [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:202]. ]", 3, true, false, false, false, true, false); // ah - Popup Trigger - Node
+selectMenu(PAResourceItoN.MsgTreePanel_MESSAGE_SEVERITY, "Message Severity"); // ao
+// WARNING: HEventQueue.dispatchEvent() is taking  3242 ms.
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // D
+// WARNING: updateGUI() is taking  2887 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2888 ms.
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // D
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // D
+// Elapsed time: 11 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_peripherals_xilinx.sv:167]. ]", 7, true, false, false, false, true, false); // ah - Popup Trigger - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Analysis Results, sim_1, [HDL 9-3116] 'plic' is not a type [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_peripherals_xilinx.sv:167]. ]", 8, true); // ah - Node
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [-1:3] out of range of prefix 'vaddr_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:162]. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;162;-;;-;16;-;"); // ah
+// WARNING: HEventQueue.dispatchEvent() is taking  2240 ms.
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), i_ariane : ariane (ariane.sv)]", 32, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv)]", 12, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv)]", 12, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  4603 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv)]", 12, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), master : AXI_BUS (axi_intf.sv)]", 18, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), master : AXI_BUS (axi_intf.sv)]", 18, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), master : AXI_BUS (axi_intf.sv)]", 18, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  2186 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), master : AXI_BUS (axi_intf.sv)]", 18, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), master : AXI_BUS (axi_intf.sv)]", 18, true); // D - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 6,416 MB. GUI used memory: 101 MB. Current time: 9/21/24, 12:58:49 AM EDT
+// WARNING: updateGUI() is taking  1050 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1050 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), master : AXI_BUS (axi_intf.sv)]", 18, true); // D - Node
+dismissDialog("Opening Editor"); // bA
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv), master : AXI_BUS (axi_intf.sv)]", 18, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1645 ms.
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv)]", 12, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, ariane_xilinx (ariane_xilinx.sv)]", 12, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  4581 ms.
+dismissDialog("Opening Editor"); // bA
+// WARNING: HEventQueue.dispatchEvent() is taking  1205 ms.
+selectCodeEditor("ariane_xilinx.sv", 486, 216); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1134 ms.
+// [Engine Memory]: 6,422 MB (+5225kb) [00:09:35]
+// Elapsed time: 17 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ariane"); // k
+selectCodeEditor("ariane_xilinx.sv", 194, 287); // be
+selectCodeEditor("ariane_xilinx.sv", 142, 5); // be
+selectCodeEditor("ariane_xilinx.sv", 107, 292); // be
+// Elapsed time: 14 seconds
+selectCodeEditor("ariane_xilinx.sv", 81, 145); // be
+// WARNING: HEventQueue.dispatchEvent() is taking  1538 ms.
+// Elapsed time: 23 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "ariane"); // k
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cva6_icache.sv", 4); // m
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [-1:3] out of range of prefix 'vaddr_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:162]. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;162;-;;-;16;-;"); // ah
+// Elapsed time: 11 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'cva6_icache' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:28]. ]", 11, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;28;-;;-;16;-;"); // ah
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [-1:3] out of range of prefix 'vaddr_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:162]. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;162;-;;-;16;-;"); // ah
+// Elapsed time: 50 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [-1:3] out of range of prefix 'vaddr_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:162]. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;162;-;;-;16;-;"); // ah
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "acc_dispatcher.sv", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "cva6_icache.sv", 4); // m
+// Elapsed time: 51 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [-1:3] out of range of prefix 'vaddr_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:162]. ]", 10, false); // ah
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;162;-;;-;16;-;"); // ah
+// Elapsed time: 77 seconds
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'cva6_icache' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:28]. ]", 11, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;162;-;;-;16;-;"); // ah
+// WARNING: HEventQueue.dispatchEvent() is taking  1951 ms.
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'cva6_icache' [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv:28]. ]", 11, true); // ah - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.sv;-;;-;16;-;line;-;28;-;;-;16;-;"); // ah
+// WARNING: HEventQueue.dispatchEvent() is taking  2964 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1098 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1299 ms.

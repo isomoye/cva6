@@ -1,0 +1,236 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sat Sep 21 00:49:37 2024
+# Process ID: 46532
+# Current directory: /tools/C/eegr-463/idris.somoye/test_clone/synth
+# Command line: vivado ../corev_apu/fpga/ariane.xpr
+# Log file: /tools/C/eegr-463/idris.somoye/test_clone/synth/vivado.log
+# Journal file: /tools/C/eegr-463/idris.somoye/test_clone/synth/vivado.jou
+# Running On: capc-cl1-1.msucap.com, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 32, Host memory: 1081420 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project ../corev_apu/fpga/ariane.xpr
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_mig_7_ddr3' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.gen/sources_1/ip/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_mig_7_ddr3' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.gen/sources_1/ip/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_mig_7_ddr3' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.gen/sources_1/ip/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_mig_7_ddr3' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.gen/sources_1/ip/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_mig_7_ddr3' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3.gen/sources_1/ip/xlnx_mig_7_ddr3/xlnx_mig_7_ddr3_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_clk_gen' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_clk_gen' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_clk_gen' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_clk_gen' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_clk_gen' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_clk_gen/xlnx_clk_gen.gen/sources_1/ip/xlnx_clk_gen/xlnx_clk_gen_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_clock_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.gen/sources_1/ip/xlnx_axi_clock_converter/xlnx_axi_clock_converter.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_clock_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.gen/sources_1/ip/xlnx_axi_clock_converter/xlnx_axi_clock_converter_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_clock_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.gen/sources_1/ip/xlnx_axi_clock_converter/xlnx_axi_clock_converter_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_clock_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.gen/sources_1/ip/xlnx_axi_clock_converter/xlnx_axi_clock_converter_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_clock_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_clock_converter/xlnx_axi_clock_converter.gen/sources_1/ip/xlnx_axi_clock_converter/xlnx_axi_clock_converter_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_gpio' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_gpio/xlnx_axi_gpio.gen/sources_1/ip/xlnx_axi_gpio/xlnx_axi_gpio.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_gpio' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_gpio/xlnx_axi_gpio.gen/sources_1/ip/xlnx_axi_gpio/xlnx_axi_gpio_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_gpio' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_gpio/xlnx_axi_gpio.gen/sources_1/ip/xlnx_axi_gpio/xlnx_axi_gpio_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_gpio' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_gpio/xlnx_axi_gpio.gen/sources_1/ip/xlnx_axi_gpio/xlnx_axi_gpio_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_gpio' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_gpio/xlnx_axi_gpio.gen/sources_1/ip/xlnx_axi_gpio/xlnx_axi_gpio_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.gen/sources_1/ip/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.gen/sources_1/ip/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.gen/sources_1/ip/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.gen/sources_1/ip/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter.gen/sources_1/ip/xlnx_axi_dwidth_converter/xlnx_axi_dwidth_converter_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_quad_spi' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_quad_spi/xlnx_axi_quad_spi.gen/sources_1/ip/xlnx_axi_quad_spi/xlnx_axi_quad_spi.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_quad_spi' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_quad_spi/xlnx_axi_quad_spi.gen/sources_1/ip/xlnx_axi_quad_spi/xlnx_axi_quad_spi_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_quad_spi' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_quad_spi/xlnx_axi_quad_spi.gen/sources_1/ip/xlnx_axi_quad_spi/xlnx_axi_quad_spi_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_quad_spi' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_quad_spi/xlnx_axi_quad_spi.gen/sources_1/ip/xlnx_axi_quad_spi/xlnx_axi_quad_spi_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_quad_spi' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_quad_spi/xlnx_axi_quad_spi.gen/sources_1/ip/xlnx_axi_quad_spi/xlnx_axi_quad_spi_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_master' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_master' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_master' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_master' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_master' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_master/xlnx_axi_dwidth_converter_dm_master_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_slave' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_slave' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_slave' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_slave' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave_sim_netlist.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'xlnx_axi_dwidth_converter_dm_slave' generated file not found '/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/xilinx/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave.gen/sources_1/ip/xlnx_axi_dwidth_converter_dm_slave/xlnx_axi_dwidth_converter_dm_slave_sim_netlist.vhdl'. Please regenerate to continue.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+update_compile_order -fileset sources_1
+set_property top ariane [current_fileset]
+update_compile_order -fileset sources_1
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at /tools/Xilinx/Vivado/2022.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+set_property board_part digilentinc.com:gzu_5ev:part0:1.1 [current_project]
+WARNING: [Project 1-153] The current project device 'xc7k325tffg900-2' does not match with the device on the 'DIGILENTINC.COM:GZU_5EV:PART0:1.1' board part. A device change to match the device on 'DIGILENTINC.COM:GZU_5EV:PART0:1.1' board part is being done. Please upgrade the IP in the project via the upgrade_ip command or by selecting Reports => Reports IP Status.
+INFO: [Project 1-152] Project part set to zynquplus (xczu5ev-sfvc784-1-e)
+launch_runs synth_1 -jobs 64
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sat Sep 21 00:54:14 2024] Launched synth_1...
+Run output will be captured here: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.runs/synth_1/runme.log
+add_files -norecurse /tools/C/eegr-463/idris.somoye/test_clone/core/include/cvxif_types.svh
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 64
+WARNING: [filemgmt 56-315] Source scanning failed during design analysis. To get more details run synthesis or simulation and check the log.
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'RVFI_PROBES_INSTR_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:202]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:202]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'RVFI_PROBES_CSR_T' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:203]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:203]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'AXI_TYPEDEF_ALL' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:221]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:221]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'AXI_ASSIGN_FROM_REQ' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:746]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:746]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ',' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:746]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'AXI_ASSIGN_TO_RESP' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:747]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:747]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:776]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ',' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:776]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:777]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'AXI_ASSIGN_TO_REQ' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:813]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:813]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:813]
+CRITICAL WARNING: [HDL 9-3952] use of undefined macro 'AXI_ASSIGN_FROM_RESP' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:814]
+CRITICAL WARNING: [HDL 9-3116] 'slave' is not a type [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:746]
+CRITICAL WARNING: [HDL 9-3116] 'slave' is not a type [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:776]
+CRITICAL WARNING: [HDL 9-3116] 'rtc' is not a type [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:787]
+CRITICAL WARNING: [HDL 9-3116] 'axi_clint_req' is not a type [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/ariane_xilinx.sv:813]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:313]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '\' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:319]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '\' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:320]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:328]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:328]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'fflags' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:328]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:328]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:329]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'frm' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:329]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:329]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:330]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '{' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:330]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'fflags' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:330]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '}' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:330]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:332]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'fprec' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:332]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:332]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:333]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:335]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:337]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:338]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:340]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'mstatus_extended' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:341]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '&' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:341]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:343]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'mie_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:343]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '&' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:343]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:344]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'mip_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:344]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '&' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:344]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:346]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:348]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:350]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:351]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:353]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:355]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:356]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:358]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'mstatus_extended' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:358]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:358]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:361]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:361]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:363]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:363]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:365]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:366]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:368]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:369]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:370]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:372]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:374]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:375]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:376]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:377]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:379]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'fiom_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:379]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:379]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:381]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '32' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:381]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:383]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:383]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:384]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:384]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:385]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:385]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:387]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:389]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'cycle_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:389]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:389]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:390]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'cycle_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:390]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:390]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:392]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'instret_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:392]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:392]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:393]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'instret_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:393]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:393]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:395]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'cycle_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:395]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:395]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:396]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'cycle_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:396]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:396]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:398]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'instret_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:398]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:398]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:399]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'instret_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:399]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:399]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:401]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:402]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:404]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:406]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'pmpcfg_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:406]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:406]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:407]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'pmpcfg_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:407]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:407]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:409]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'pmpcfg_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:409]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:409]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:410]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'pmpcfg_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:410]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:410]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:416]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near '(' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:416]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near 'pmpaddr_q' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:416]
+CRITICAL WARNING: [HDL 9-1206] Syntax error near ')' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6_rvfi.sv:416]
+WARNING: [Vivado 12-7122] Auto Incremental Compile:: No reference checkpoint was found in run synth_1. Auto-incremental flow will not be run, the standard flow will be run instead.
+[Sat Sep 21 00:56:56 2024] Launched synth_1...
+Run output will be captured here: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.runs/synth_1/runme.log
