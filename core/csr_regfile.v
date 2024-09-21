@@ -3352,39 +3352,39 @@ module csr_regfile_386FB_07714 (
 	// 	$stop;
 	// end
 	// Trace: core/csr_regfile.sv:2745:3
-	assign rvfi_csr_o.fcsr_q = (CVA6Cfg[16471] ? fcsr_q : {$bits(type(rvfi_csr_o.fcsr_q)) {1'sb0}});
+	assign rvfi_csr_o.fcsr_q = (CVA6Cfg[16471] ? fcsr_q : {$bits((rvfi_csr_o.fcsr_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2746:3
-	assign rvfi_csr_o.dcsr_q = (CVA6Cfg[1321] ? dcsr_q : {$bits(type(rvfi_csr_o.dcsr_q)) {1'sb0}});
+	assign rvfi_csr_o.dcsr_q = (CVA6Cfg[1321] ? dcsr_q : {$bits((rvfi_csr_o.dcsr_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2747:3
-	assign rvfi_csr_o.dpc_q = (CVA6Cfg[1321] ? dpc_q : {$bits(type(rvfi_csr_o.dpc_q)) {1'sb0}});
+	assign rvfi_csr_o.dpc_q = (CVA6Cfg[1321] ? dpc_q : {$bits((rvfi_csr_o.dpc_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2748:3
-	assign rvfi_csr_o.dscratch0_q = (CVA6Cfg[1321] ? dscratch0_q : {$bits(type(rvfi_csr_o.dscratch0_q)) {1'sb0}});
+	assign rvfi_csr_o.dscratch0_q = (CVA6Cfg[1321] ? dscratch0_q : {$bits((rvfi_csr_o.dscratch0_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2749:3
-	assign rvfi_csr_o.dscratch1_q = (CVA6Cfg[1321] ? dscratch1_q : {$bits(type(rvfi_csr_o.dscratch1_q)) {1'sb0}});
+	assign rvfi_csr_o.dscratch1_q = (CVA6Cfg[1321] ? dscratch1_q : {$bits((rvfi_csr_o.dscratch1_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2750:3
 	assign rvfi_csr_o.mie_q = mie_q;
 	// Trace: core/csr_regfile.sv:2751:3
 	assign rvfi_csr_o.mip_q = mip_q;
 	// Trace: core/csr_regfile.sv:2752:3
-	assign rvfi_csr_o.stvec_q = (CVA6Cfg[16366] ? stvec_q : {$bits(type(rvfi_csr_o.stvec_q)) {1'sb0}});
+	assign rvfi_csr_o.stvec_q = (CVA6Cfg[16366] ? stvec_q : {$bits((rvfi_csr_o.stvec_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2753:3
-	assign rvfi_csr_o.scounteren_q = (CVA6Cfg[16366] ? scounteren_q : {$bits(type(rvfi_csr_o.scounteren_q)) {1'sb0}});
+	assign rvfi_csr_o.scounteren_q = (CVA6Cfg[16366] ? scounteren_q : {$bits((rvfi_csr_o.scounteren_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2754:3
-	assign rvfi_csr_o.sscratch_q = (CVA6Cfg[16366] ? sscratch_q : {$bits(type(rvfi_csr_o.sscratch_q)) {1'sb0}});
+	assign rvfi_csr_o.sscratch_q = (CVA6Cfg[16366] ? sscratch_q : {$bits((rvfi_csr_o.sscratch_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2755:3
-	assign rvfi_csr_o.sepc_q = (CVA6Cfg[16366] ? sepc_q : {$bits(type(rvfi_csr_o.sepc_q)) {1'sb0}});
+	assign rvfi_csr_o.sepc_q = (CVA6Cfg[16366] ? sepc_q : {$bits((rvfi_csr_o.sepc_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2756:3
-	assign rvfi_csr_o.scause_q = (CVA6Cfg[16366] ? scause_q : {$bits(type(rvfi_csr_o.scause_q)) {1'sb0}});
+	assign rvfi_csr_o.scause_q = (CVA6Cfg[16366] ? scause_q : {$bits((rvfi_csr_o.scause_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2757:3
-	assign rvfi_csr_o.stval_q = (CVA6Cfg[16366] ? stval_q : {$bits(type(rvfi_csr_o.stval_q)) {1'sb0}});
+	assign rvfi_csr_o.stval_q = (CVA6Cfg[16366] ? stval_q : {$bits((rvfi_csr_o.stval_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2758:3
-	assign rvfi_csr_o.satp_q = (CVA6Cfg[16366] ? satp_q : {$bits(type(rvfi_csr_o.satp_q)) {1'sb0}});
+	assign rvfi_csr_o.satp_q = (CVA6Cfg[16366] ? satp_q : {$bits((rvfi_csr_o.satp_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2759:3
 	assign rvfi_csr_o.mstatus_extended = mstatus_extended;
 	// Trace: core/csr_regfile.sv:2760:3
-	assign rvfi_csr_o.medeleg_q = (CVA6Cfg[16366] ? medeleg_q : {$bits(type(rvfi_csr_o.medeleg_q)) {1'sb0}});
+	assign rvfi_csr_o.medeleg_q = (CVA6Cfg[16366] ? medeleg_q : {$bits((rvfi_csr_o.medeleg_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2761:3
-	assign rvfi_csr_o.mideleg_q = (CVA6Cfg[16366] ? mideleg_q : {$bits(type(rvfi_csr_o.mideleg_q)) {1'sb0}});
+	assign rvfi_csr_o.mideleg_q = (CVA6Cfg[16366] ? mideleg_q : {$bits((rvfi_csr_o.mideleg_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2762:3
 	assign rvfi_csr_o.mtvec_q = mtvec_q;
 	// Trace: core/csr_regfile.sv:2763:3
@@ -3410,7 +3410,7 @@ module csr_regfile_386FB_07714 (
 	// Trace: core/csr_regfile.sv:2773:3
 	assign rvfi_csr_o.icache_q = icache_q;
 	// Trace: core/csr_regfile.sv:2774:3
-	assign rvfi_csr_o.acc_cons_q = (CVA6Cfg[16369] ? acc_cons_q : {$bits(type(rvfi_csr_o.acc_cons_q)) {1'sb0}});
+	assign rvfi_csr_o.acc_cons_q = (CVA6Cfg[16369] ? acc_cons_q : {$bits((rvfi_csr_o.acc_cons_q)) {1'sb0}});
 	// Trace: core/csr_regfile.sv:2775:3
 	assign rvfi_csr_o.pmpcfg_q = pmpcfg_q;
 	// Trace: core/csr_regfile.sv:2776:3

@@ -62,11 +62,11 @@ module lzc (
 			for (_gv_j_1 = 0; $unsigned(_gv_j_1) < WIDTH; _gv_j_1 = _gv_j_1 + 1) begin : g_index_lut
 				localparam j = _gv_j_1;
 				// Trace: vendor/pulp-platform/common_cells/src/lzc.sv:72:7
-//				function automatic [NumLevels - 1:0] sv2v_cast_677FF;
-//					input reg [NumLevels - 1:0] inp;
-//					sv2v_cast_677FF = inp;
-//				endfunction
-				assign index_lut[j * NumLevels+:NumLevels] = $unsigned(j[NumLevels - 1:0]);
+				function automatic [NumLevels - 1:0] sv2v_cast_677FF;
+					input reg [NumLevels - 1:0] inp;
+					sv2v_cast_677FF = inp;
+				endfunction
+				assign index_lut[j * NumLevels+:NumLevels] = sv2v_cast_677FF($unsigned(j));
 			end
 			genvar _gv_level_1;
 			for (_gv_level_1 = 0; $unsigned(_gv_level_1) < NumLevels; _gv_level_1 = _gv_level_1 + 1) begin : g_levels

@@ -658,7 +658,7 @@ module fpnew_opgroup_multifmt_slice_983D9_76A82 (
 					);
 				end
 				else if (OpGroup == 2'd2) begin
-					
+					;
 				end
 				else if (OpGroup == 2'd3) begin : lane_instance
 					// Trace: core/cvfpu/src/fpnew_opgroup_multifmt_slice.sv:278:9

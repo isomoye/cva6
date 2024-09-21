@@ -403,11 +403,7 @@ module acc_dispatcher_BA9A3_5F027 (
 	// Trace: core/acc_dispatcher.sv:320:3
 	wire acc_st_disp;
 	// Trace: core/acc_dispatcher.sv:323:3
-	function automatic [((((2 + CVA6Cfg[17102-:32]) + CVA6Cfg[16503-:32]) + 74) >= 0 ? ((2 + CVA6Cfg[17102-:32]) + CVA6Cfg[16503-:32]) + 75 : 1 - (((2 + CVA6Cfg[17102-:32]) + CVA6Cfg[16503-:32]) + 74)) - 1:0] sv2v_cast_6DDB5;
-		input reg [((((2 + CVA6Cfg[17102-:32]) + CVA6Cfg[16503-:32]) + 74) >= 0 ? ((2 + CVA6Cfg[17102-:32]) + CVA6Cfg[16503-:32]) + 75 : 1 - (((2 + CVA6Cfg[17102-:32]) + CVA6Cfg[16503-:32]) + 74)) - 1:0] inp;
-		sv2v_cast_6DDB5 = inp;
-	endfunction
-	assign acc_trans_id_o = sv2v_cast_6DDB5(cast_acc_resp_i).trans_id;
+	assign acc_trans_id_o = cast_acc_resp_i[CVA6Cfg[16503-:32] + 74-:((CVA6Cfg[16503-:32] + 74) >= 75 ? CVA6Cfg[16503-:32] + 0 : 76 - (CVA6Cfg[16503-:32] + 74))];
 	// Trace: core/acc_dispatcher.sv:324:3
 	assign acc_result_o = cast_acc_resp_i[CVA6Cfg[17102-:32] + (CVA6Cfg[16503-:32] + 74)-:((CVA6Cfg[17102-:32] + (CVA6Cfg[16503-:32] + 74)) >= (CVA6Cfg[16503-:32] + 75) ? ((CVA6Cfg[17102-:32] + (CVA6Cfg[16503-:32] + 74)) - (CVA6Cfg[16503-:32] + 75)) + 1 : ((CVA6Cfg[16503-:32] + 75) - (CVA6Cfg[17102-:32] + (CVA6Cfg[16503-:32] + 74))) + 1)];
 	// Trace: core/acc_dispatcher.sv:325:3

@@ -320,7 +320,7 @@ module acc_dispatcher
   logic acc_st_disp;
 
   // Unpack the accelerator response
-  assign acc_trans_id_o = default_acc_resp_t'(cast_acc_resp_i).trans_id;
+  assign acc_trans_id_o = cast_acc_resp_i.trans_id;
   assign acc_result_o = cast_acc_resp_i.result;
   assign acc_valid_o = cast_acc_resp_i.resp_valid;
   assign acc_exception_o = '{
