@@ -212,7 +212,7 @@ module fpnew_fma_9038D_CD718 (
 	// Trace: core/cvfpu/src/fpnew_fma.sv:126:3
 	assign in_ready_o = inp_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_fma.sv:128:3
-	genvar _gv_i_66;
+	genvar _gv_i_18;
 	function automatic [3:0] sv2v_cast_4CD2E;
 		input reg [3:0] inp;
 		sv2v_cast_4CD2E = inp;
@@ -222,8 +222,8 @@ module fpnew_fma_9038D_CD718 (
 		sv2v_cast_65D85 = inp;
 	endfunction
 	generate
-		for (_gv_i_66 = 0; _gv_i_66 < NUM_INP_REGS; _gv_i_66 = _gv_i_66 + 1) begin : gen_input_pipeline
-			localparam i = _gv_i_66;
+		for (_gv_i_18 = 0; _gv_i_18 < NUM_INP_REGS; _gv_i_18 = _gv_i_18 + 1) begin : gen_input_pipeline
+			localparam i = _gv_i_18;
 			// Trace: core/cvfpu/src/fpnew_fma.sv:130:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_fma.sv:134:5
@@ -691,10 +691,10 @@ module fpnew_fma_9038D_CD718 (
 	// Trace: core/cvfpu/src/fpnew_fma.sv:440:3
 	assign inp_pipe_ready[NUM_INP_REGS] = mid_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_fma.sv:443:3
-	genvar _gv_i_67;
+	genvar _gv_i_19;
 	generate
-		for (_gv_i_67 = 0; _gv_i_67 < NUM_MID_REGS; _gv_i_67 = _gv_i_67 + 1) begin : gen_inside_pipeline
-			localparam i = _gv_i_67;
+		for (_gv_i_19 = 0; _gv_i_19 < NUM_MID_REGS; _gv_i_19 = _gv_i_19 + 1) begin : gen_inside_pipeline
+			localparam i = _gv_i_19;
 			// Trace: core/cvfpu/src/fpnew_fma.sv:445:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_fma.sv:449:5
@@ -1082,10 +1082,10 @@ module fpnew_fma_9038D_CD718 (
 	// Trace: core/cvfpu/src/fpnew_fma.sv:659:3
 	assign mid_pipe_ready[NUM_MID_REGS] = out_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_fma.sv:661:3
-	genvar _gv_i_68;
+	genvar _gv_i_20;
 	generate
-		for (_gv_i_68 = 0; _gv_i_68 < NUM_OUT_REGS; _gv_i_68 = _gv_i_68 + 1) begin : gen_output_pipeline
-			localparam i = _gv_i_68;
+		for (_gv_i_20 = 0; _gv_i_20 < NUM_OUT_REGS; _gv_i_20 = _gv_i_20 + 1) begin : gen_output_pipeline
+			localparam i = _gv_i_20;
 			// Trace: core/cvfpu/src/fpnew_fma.sv:663:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_fma.sv:667:5

@@ -591,10 +591,10 @@ module load_unit_BE1C9_7E14E (
 	// Trace: core/load_unit.sv:497:3
 	assign rdata_offset = (|{ldbuf_rdata[7-:8] == 8'd39, ldbuf_rdata[7-:8] == 8'd97, ldbuf_rdata[7-:8] == 8'd53} & CVA6Cfg[16973] ? ldbuf_rdata[CVA6Cfg[16972-:32] + 7-:((CVA6Cfg[16972-:32] + 7) >= 8 ? CVA6Cfg[16972-:32] + 0 : 9 - (CVA6Cfg[16972-:32] + 7))] + 3 : (|{ldbuf_rdata[7-:8] == 8'd42, ldbuf_rdata[7-:8] == 8'd98, ldbuf_rdata[7-:8] == 8'd50} ? ldbuf_rdata[CVA6Cfg[16972-:32] + 7-:((CVA6Cfg[16972-:32] + 7) >= 8 ? CVA6Cfg[16972-:32] + 0 : 9 - (CVA6Cfg[16972-:32] + 7))] + 1 : ldbuf_rdata[CVA6Cfg[16972-:32] + 7-:((CVA6Cfg[16972-:32] + 7) >= 8 ? CVA6Cfg[16972-:32] + 0 : 9 - (CVA6Cfg[16972-:32] + 7))]));
 	// Trace: core/load_unit.sv:501:3
-	genvar _gv_i_34;
+	genvar _gv_i_43;
 	generate
-		for (_gv_i_34 = 0; _gv_i_34 < (CVA6Cfg[17102-:32] / 8); _gv_i_34 = _gv_i_34 + 1) begin : gen_sign_bits
-			localparam i = _gv_i_34;
+		for (_gv_i_43 = 0; _gv_i_43 < (CVA6Cfg[17102-:32] / 8); _gv_i_43 = _gv_i_43 + 1) begin : gen_sign_bits
+			localparam i = _gv_i_43;
 			// Trace: core/load_unit.sv:502:5
 			assign rdata_sign_bits[i] = req_port_i[(dcache_req_o_t_dcache_req_o_t_dcache_req_o_t_CVA6Cfg[17102-:32] + (dcache_req_o_t_dcache_req_o_t_dcache_req_o_t_CVA6Cfg[900-:32] - 1)) - ((dcache_req_o_t_dcache_req_o_t_dcache_req_o_t_CVA6Cfg[17102-:32] - 1) - (((i + 1) * 8) - 1))];
 		end

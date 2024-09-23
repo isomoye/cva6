@@ -334,10 +334,10 @@ module wt_dcache_missunit_AE121_53AFD (
 	// Trace: core/cache_subsystem/wt_dcache_missunit.sv:223:3
 	assign miss_o = (mshr_allocate ? ~miss_nc_i[miss_port_idx] : 1'b0);
 	// Trace: core/cache_subsystem/wt_dcache_missunit.sv:226:3
-	genvar _gv_k_12;
+	genvar _gv_k_14;
 	generate
-		for (_gv_k_12 = 0; _gv_k_12 < NumPorts; _gv_k_12 = _gv_k_12 + 1) begin : gen_rdrd_collision
-			localparam k = _gv_k_12;
+		for (_gv_k_14 = 0; _gv_k_14 < NumPorts; _gv_k_14 = _gv_k_14 + 1) begin : gen_rdrd_collision
+			localparam k = _gv_k_14;
 			// Trace: core/cache_subsystem/wt_dcache_missunit.sv:227:5
 			assign mshr_rdrd_collision[k] = (mshr_q[(CVA6Cfg[17038-:32] + (3 + (CVA6Cfg[1092-:32] + (CVA6Cfg[16616-:32] + (1 + ($clog2(CVA6Cfg[1092-:32]) + ($clog2(NumPorts) - 1))))))) - ((CVA6Cfg[17038-:32] - 1) - (CVA6Cfg[17038-:32] - 1)):(CVA6Cfg[17038-:32] + (3 + (CVA6Cfg[1092-:32] + (CVA6Cfg[16616-:32] + (1 + ($clog2(CVA6Cfg[1092-:32]) + ($clog2(NumPorts) - 1))))))) - ((CVA6Cfg[17038-:32] - 1) - CVA6Cfg[868-:32])] == miss_paddr_i[(k * CVA6Cfg[17038-:32]) + ((CVA6Cfg[17038-:32] - 1) >= CVA6Cfg[868-:32] ? CVA6Cfg[17038-:32] - 1 : ((CVA6Cfg[17038-:32] - 1) + ((CVA6Cfg[17038-:32] - 1) >= CVA6Cfg[868-:32] ? ((CVA6Cfg[17038-:32] - 1) - CVA6Cfg[868-:32]) + 1 : (CVA6Cfg[868-:32] - (CVA6Cfg[17038-:32] - 1)) + 1)) - 1)-:((CVA6Cfg[17038-:32] - 1) >= CVA6Cfg[868-:32] ? ((CVA6Cfg[17038-:32] - 1) - CVA6Cfg[868-:32]) + 1 : (CVA6Cfg[868-:32] - (CVA6Cfg[17038-:32] - 1)) + 1)]) && (mshr_vld_q | mshr_vld_q1);
 			// Trace: core/cache_subsystem/wt_dcache_missunit.sv:228:5

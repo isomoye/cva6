@@ -1737,6 +1737,21 @@ module cva6_4956D_8351D (
 		end
 		else if (CVA6Cfg[1126-:2] == 2'd2) begin : gen_cache_hpd
 			// Trace: core/cva6.sv:1326:5
+			// removed localparam type sv2v_uu_i_cache_subsystem_dcache_cmo_req_i
+			localparam [0:0] sv2v_uu_i_cache_subsystem_ext_dcache_cmo_req_i_0 = 1'sb0;
+			localparam signed [31:0] sv2v_uu_i_cache_subsystem_NrHwPrefetchers = 4;
+			// removed localparam type sv2v_uu_i_cache_subsystem_hwpf_base_set_i
+			localparam [3:0] sv2v_uu_i_cache_subsystem_ext_hwpf_base_set_i_0 = 1'sb0;
+			// removed localparam type sv2v_uu_i_cache_subsystem_hwpf_base_i
+			localparam [255:0] sv2v_uu_i_cache_subsystem_ext_hwpf_base_i_0 = 1'sb0;
+			// removed localparam type sv2v_uu_i_cache_subsystem_hwpf_param_set_i
+			localparam [3:0] sv2v_uu_i_cache_subsystem_ext_hwpf_param_set_i_0 = 1'sb0;
+			// removed localparam type sv2v_uu_i_cache_subsystem_hwpf_param_i
+			localparam [255:0] sv2v_uu_i_cache_subsystem_ext_hwpf_param_i_0 = 1'sb0;
+			// removed localparam type sv2v_uu_i_cache_subsystem_hwpf_throttle_set_i
+			localparam [3:0] sv2v_uu_i_cache_subsystem_ext_hwpf_throttle_set_i_0 = 1'sb0;
+			// removed localparam type sv2v_uu_i_cache_subsystem_hwpf_throttle_i
+			localparam [255:0] sv2v_uu_i_cache_subsystem_ext_hwpf_throttle_i_0 = 1'sb0;
 			cva6_hpdcache_subsystem_964A5_2044D #(
 				.axi_ar_chan_t_axi_ar_chan_t_ariane_axi_AddrWidth(axi_ar_chan_t_ariane_axi_AddrWidth),
 				.axi_ar_chan_t_axi_ar_chan_t_ariane_axi_IdWidth(axi_ar_chan_t_ariane_axi_IdWidth),
@@ -1785,20 +1800,20 @@ module cva6_4956D_8351D (
 				.dcache_miss_o(dcache_miss_cache_perf),
 				.dcache_amo_req_i(amo_req),
 				.dcache_amo_resp_o(amo_resp),
-				.dcache_cmo_req_i(1'sb0),
+				.dcache_cmo_req_i(sv2v_uu_i_cache_subsystem_ext_dcache_cmo_req_i_0),
 				.dcache_cmo_resp_o(),
 				.dcache_req_ports_i(dcache_req_to_cache),
 				.dcache_req_ports_o(dcache_req_from_cache),
 				.wbuffer_empty_o(dcache_commit_wbuffer_empty),
 				.wbuffer_not_ni_o(dcache_commit_wbuffer_not_ni),
-				.hwpf_base_set_i(1'sb0),
-				.hwpf_base_i(1'sb0),
+				.hwpf_base_set_i(sv2v_uu_i_cache_subsystem_ext_hwpf_base_set_i_0),
+				.hwpf_base_i(sv2v_uu_i_cache_subsystem_ext_hwpf_base_i_0),
 				.hwpf_base_o(),
-				.hwpf_param_set_i(1'sb0),
-				.hwpf_param_i(1'sb0),
+				.hwpf_param_set_i(sv2v_uu_i_cache_subsystem_ext_hwpf_param_set_i_0),
+				.hwpf_param_i(sv2v_uu_i_cache_subsystem_ext_hwpf_param_i_0),
 				.hwpf_param_o(),
-				.hwpf_throttle_set_i(1'sb0),
-				.hwpf_throttle_i(1'sb0),
+				.hwpf_throttle_set_i(sv2v_uu_i_cache_subsystem_ext_hwpf_throttle_set_i_0),
+				.hwpf_throttle_i(sv2v_uu_i_cache_subsystem_ext_hwpf_throttle_i_0),
 				.hwpf_throttle_o(),
 				.hwpf_status_o(),
 				.noc_req_o(noc_req_o),
@@ -2011,10 +2026,10 @@ module cva6_4956D_8351D (
 	// Trace: core/cva6.sv:1684:3
 	wire [(CVA6Cfg[16841-:32] * 32) - 1:0] rvfi_fetch_instr;
 	// Trace: core/cva6.sv:1685:3
-	genvar _gv_i_4;
+	genvar _gv_i_28;
 	generate
-		for (_gv_i_4 = 0; _gv_i_4 < CVA6Cfg[16841-:32]; _gv_i_4 = _gv_i_4 + 1) begin : genblk6
-			localparam i = _gv_i_4;
+		for (_gv_i_28 = 0; _gv_i_28 < CVA6Cfg[16841-:32]; _gv_i_28 = _gv_i_28 + 1) begin : genblk6
+			localparam i = _gv_i_28;
 			// Trace: core/cva6.sv:1686:5
 			assign rvfi_fetch_instr[i * 32+:32] = fetch_entry_if_id[(i * (((CVA6Cfg[17070-:32] + 32) + (3 + CVA6Cfg[17070-:32])) + ((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)))) + (32 + ((3 + CVA6Cfg[17070-:32]) + (((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)) - 1)))-:((32 + ((3 + CVA6Cfg[17070-:32]) + (((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)) - 1))) >= ((3 + CVA6Cfg[17070-:32]) + (((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)) + 0)) ? ((32 + ((3 + CVA6Cfg[17070-:32]) + (((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)) - 1))) - ((3 + CVA6Cfg[17070-:32]) + (((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)) + 0))) + 1 : (((3 + CVA6Cfg[17070-:32]) + (((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)) + 0)) - (32 + ((3 + CVA6Cfg[17070-:32]) + (((((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33) >= 0 ? ((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 34 : 1 - (((CVA6Cfg[17102-:32] + CVA6Cfg[17102-:32]) + CVA6Cfg[17006-:32]) + 33)) - 1)))) + 1)];
 		end

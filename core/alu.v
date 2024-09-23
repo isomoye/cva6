@@ -234,16 +234,16 @@ module alu_4BFF1_9AA73 (
 	// Trace: core/alu.sv:170:3
 	assign shift_right_result32 = $unsigned($signed(shift_op_a_32) >>> shift_amt[4:0]);
 	// Trace: core/alu.sv:172:3
-	genvar _gv_j_2;
+	genvar _gv_j_3;
 	// Trace: core/alu.sv:173:3
 	generate
-		for (_gv_j_2 = 0; _gv_j_2 < CVA6Cfg[17102-:32]; _gv_j_2 = _gv_j_2 + 1) begin : genblk3
-			localparam j = _gv_j_2;
+		for (_gv_j_3 = 0; _gv_j_3 < CVA6Cfg[17102-:32]; _gv_j_3 = _gv_j_3 + 1) begin : genblk3
+			localparam j = _gv_j_3;
 			// Trace: core/alu.sv:175:7
 			assign shift_left_result[j] = shift_right_result[(CVA6Cfg[17102-:32] - 1) - j];
 		end
-		for (_gv_j_2 = 0; _gv_j_2 < 32; _gv_j_2 = _gv_j_2 + 1) begin : genblk4
-			localparam j = _gv_j_2;
+		for (_gv_j_3 = 0; _gv_j_3 < 32; _gv_j_3 = _gv_j_3 + 1) begin : genblk4
+			localparam j = _gv_j_3;
 			// Trace: core/alu.sv:177:30
 			assign shift_left_result32[j] = shift_right_result32[31 - j];
 		end

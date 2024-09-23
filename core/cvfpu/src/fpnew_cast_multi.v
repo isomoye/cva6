@@ -346,7 +346,7 @@ module fpnew_cast_multi_0D619_08FB4 (
 	// Trace: core/cvfpu/src/fpnew_cast_multi.sv:141:3
 	assign in_ready_o = inp_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_cast_multi.sv:143:3
-	genvar _gv_i_58;
+	genvar _gv_i_10;
 	function automatic [3:0] sv2v_cast_4CD2E;
 		input reg [3:0] inp;
 		sv2v_cast_4CD2E = inp;
@@ -360,8 +360,8 @@ module fpnew_cast_multi_0D619_08FB4 (
 		sv2v_cast_533F1 = inp;
 	endfunction
 	generate
-		for (_gv_i_58 = 0; _gv_i_58 < NUM_INP_REGS; _gv_i_58 = _gv_i_58 + 1) begin : gen_input_pipeline
-			localparam i = _gv_i_58;
+		for (_gv_i_10 = 0; _gv_i_10 < NUM_INP_REGS; _gv_i_10 = _gv_i_10 + 1) begin : gen_input_pipeline
+			localparam i = _gv_i_10;
 			// Trace: core/cvfpu/src/fpnew_cast_multi.sv:145:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_cast_multi.sv:149:5
@@ -804,10 +804,10 @@ module fpnew_cast_multi_0D619_08FB4 (
 	// Trace: core/cvfpu/src/fpnew_cast_multi.sv:363:3
 	assign inp_pipe_ready[NUM_INP_REGS] = mid_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_cast_multi.sv:366:3
-	genvar _gv_i_59;
+	genvar _gv_i_11;
 	generate
-		for (_gv_i_59 = 0; _gv_i_59 < NUM_MID_REGS; _gv_i_59 = _gv_i_59 + 1) begin : gen_inside_pipeline
-			localparam i = _gv_i_59;
+		for (_gv_i_11 = 0; _gv_i_11 < NUM_MID_REGS; _gv_i_11 = _gv_i_11 + 1) begin : gen_inside_pipeline
+			localparam i = _gv_i_11;
 			// Trace: core/cvfpu/src/fpnew_cast_multi.sv:368:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_cast_multi.sv:372:5
@@ -1452,10 +1452,10 @@ module fpnew_cast_multi_0D619_08FB4 (
 	// Trace: core/cvfpu/src/fpnew_cast_multi.sv:762:3
 	assign mid_pipe_ready[NUM_MID_REGS] = out_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_cast_multi.sv:764:3
-	genvar _gv_i_60;
+	genvar _gv_i_12;
 	generate
-		for (_gv_i_60 = 0; _gv_i_60 < NUM_OUT_REGS; _gv_i_60 = _gv_i_60 + 1) begin : gen_output_pipeline
-			localparam i = _gv_i_60;
+		for (_gv_i_12 = 0; _gv_i_12 < NUM_OUT_REGS; _gv_i_12 = _gv_i_12 + 1) begin : gen_output_pipeline
+			localparam i = _gv_i_12;
 			// Trace: core/cvfpu/src/fpnew_cast_multi.sv:766:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_cast_multi.sv:770:5

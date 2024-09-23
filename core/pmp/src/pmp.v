@@ -43,9 +43,9 @@ module pmp (
 		if (NR_ENTRIES > 0) begin : gen_pmp
 			// Trace: core/pmp/src/pmp.sv:33:5
 			wire [NR_ENTRIES - 1:0] match;
-			genvar _gv_i_72;
-			for (_gv_i_72 = 0; _gv_i_72 < NR_ENTRIES; _gv_i_72 = _gv_i_72 + 1) begin : genblk1
-				localparam i = _gv_i_72;
+			genvar _gv_i_82;
+			for (_gv_i_82 = 0; _gv_i_82 < NR_ENTRIES; _gv_i_82 = _gv_i_82 + 1) begin : genblk1
+				localparam i = _gv_i_82;
 				// Trace: core/pmp/src/pmp.sv:36:7
 				wire [PMP_LEN - 1:0] conf_addr_prev;
 				// Trace: core/pmp/src/pmp.sv:38:7

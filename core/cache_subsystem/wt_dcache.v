@@ -230,10 +230,10 @@ module wt_dcache_FC8CF_DE568 (
 		.mem_data_o(mem_data_o)
 	);
 	// Trace: core/cache_subsystem/wt_dcache.sv:192:3
-	genvar _gv_k_16;
+	genvar _gv_k_18;
 	generate
-		for (_gv_k_16 = 0; _gv_k_16 < (NumPorts - 1); _gv_k_16 = _gv_k_16 + 1) begin : gen_rd_ports
-			localparam k = _gv_k_16;
+		for (_gv_k_18 = 0; _gv_k_18 < (NumPorts - 1); _gv_k_18 = _gv_k_18 + 1) begin : gen_rd_ports
+			localparam k = _gv_k_18;
 			if ((((k == 0) && CVA6Cfg[16367]) || (k == 1)) || ((k == 2) && CVA6Cfg[16369])) begin : genblk1
 				// Trace: core/cache_subsystem/wt_dcache.sv:195:7
 				assign rd_prio[k] = 1'b1;

@@ -43,10 +43,10 @@ module instr_realign (
 	// Trace: core/instr_realign.sv:49:3
 	wire [CVA6Cfg[579-:32] - 1:0] instr_is_compressed;
 	// Trace: core/instr_realign.sv:51:3
-	genvar _gv_i_24;
+	genvar _gv_i_29;
 	generate
-		for (_gv_i_24 = 0; _gv_i_24 < CVA6Cfg[579-:32]; _gv_i_24 = _gv_i_24 + 1) begin : genblk1
-			localparam i = _gv_i_24;
+		for (_gv_i_29 = 0; _gv_i_29 < CVA6Cfg[579-:32]; _gv_i_29 = _gv_i_29 + 1) begin : genblk1
+			localparam i = _gv_i_29;
 			// Trace: core/instr_realign.sv:53:5
 			assign instr_is_compressed[i] = ~&data_i[i * 16+:2];
 		end

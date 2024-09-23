@@ -16,6 +16,7 @@ module cva6_fifo_v3 #(
     parameter int unsigned DEPTH = 8,  // depth can be arbitrary from 0 to 2**32
     // parameter type logic = logic [DATA_WIDTH-1:0],
     parameter bit FPGA_EN = 1'b0,
+    parameter int unsigned dtype = 0,
     // DO NOT OVERWRITE THIS PARAMETER
     parameter int unsigned ADDR_DEPTH = (DEPTH > 1) ? $clog2(DEPTH) : 1
 ) (

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ariane_cyclone
-Sat Sep 21 00:17:35 2024
+Sat Sep 21 19:57:41 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sat Sep 21 00:17:35 2024           ;
+; Analysis & Synthesis Status ; Failed - Sat Sep 21 19:57:41 2024           ;
 ; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name               ; ariane_cyclone                              ;
 ; Top-level Entity Name       ; ariane                                      ;
@@ -162,12 +162,17 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Sep 21 00:17:30 2024
+    Info: Processing started: Sat Sep 21 19:57:36 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ariane_cyclone -c ariane_cyclone
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 64 processors detected
-Info (12021): Found 1 design units, including 0 entities, in source file core/include/cv64a6_imafdc_sv39_openpiton_config_pkg.sv
-    Info (12022): Found design unit 1: cva6_config_pkg (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/core/include/cv64a6_imafdc_sv39_openpiton_config_pkg.sv Line: 11
+Info (12021): Found 1 design units, including 0 entities, in source file core/include/build_config_pkg.sv
+    Info (12022): Found design unit 1: build_config_pkg (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/core/include/build_config_pkg.sv Line: 1
+Info (12021): Found 1 design units, including 0 entities, in source file core/include/config_pkg.sv
+    Info (12022): Found design unit 1: config_pkg (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/core/include/config_pkg.sv Line: 10
+Info (12021): Found 1 design units, including 0 entities, in source file core/include/cv64a6_mmu_config_pkg.sv
+    Info (12022): Found design unit 1: cva6_config_pkg (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/core/include/cv64a6_mmu_config_pkg.sv Line: 10
+Warning (12019): Can't analyze file -- file core/include/cv64a6_imafdc_config_pkg.sv is missing
 Info (12021): Found 1 design units, including 0 entities, in source file core/include/riscv_pkg.sv
     Info (12022): Found design unit 1: riscv (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/core/include/riscv_pkg.sv Line: 18
 Info (12021): Found 1 design units, including 0 entities, in source file corev_apu/riscv-dbg/src/dm_pkg.sv
@@ -196,8 +201,8 @@ Info (12021): Found 1 design units, including 0 entities, in source file core/in
     Info (12022): Found design unit 1: instr_tracer_pkg (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/core/include/instr_tracer_pkg.sv Line: 16
 Info (12021): Found 1 design units, including 0 entities, in source file core/cvxif_example/include/cvxif_instr_pkg.sv
     Info (12022): Found design unit 1: cvxif_instr_pkg (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvxif_example/include/cvxif_instr_pkg.sv Line: 12
-Info (12021): Found 1 design units, including 1 entities, in source file core/acc_dispatcher.sv
-    Info (12023): Found entity 1: acc_dispatcher File: /tools/C/eegr-463/idris.somoye/test_clone/core/acc_dispatcher.sv Line: 47
+Error (10170): Verilog HDL syntax error at acc_dispatcher.sv(17) near text: "import";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/acc_dispatcher.sv Line: 17
+Info (12021): Found 0 design units, including 0 entities, in source file core/acc_dispatcher.sv
 Info (12021): Found 1 design units, including 0 entities, in source file corev_apu/rv_plic/rtl/rv_plic_reg_pkg.sv
     Info (12022): Found design unit 1: rv_plic_reg_pkg (SystemVerilog) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/rv_plic_reg_pkg.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file common/local/util/sram.sv
@@ -407,7 +412,6 @@ Error (10170): Verilog HDL syntax error at csr_buffer.sv(21) near text: "type"; 
 Error (10112): Ignored design unit "csr_buffer" at csr_buffer.sv(17) due to previous errors File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_buffer.sv Line: 17
 Info (12021): Found 0 design units, including 0 entities, in source file core/csr_buffer.sv
 Error (10170): Verilog HDL syntax error at csr_regfile.sv(20) near text: "type";  expecting an identifier ("type" is a reserved keyword ). Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 20
-Error (10170): Verilog HDL syntax error at csr_regfile.sv(232) near text: "logic";  expecting ".", or "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 232
 Error (10170): Verilog HDL syntax error at csr_regfile.sv(320) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 320
 Error (10170): Verilog HDL syntax error at csr_regfile.sv(320) near text: ")";  expecting ".", or "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 320
 Error (10149): Verilog HDL Declaration error at csr_regfile.sv(324): identifier "vsstatus_q" is already declared in the present scope File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 324
@@ -425,6 +429,7 @@ Error (10170): Verilog HDL syntax error at csr_regfile.sv(1898) near text: ")"; 
 Error (10170): Verilog HDL syntax error at csr_regfile.sv(1898) near text: ";";  expecting "<=", or "=", or "+=", or "-=", or "*=", or "/=", or "%=", or "&=", or "|=", or "^=", or "<<=", or ">>=", or "<<<=", or ">>>=", or "++", or "--". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 1898
 Error (10170): Verilog HDL syntax error at csr_regfile.sv(1918) near text: "inside";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 1918
 Error (10170): Verilog HDL syntax error at csr_regfile.sv(1924) near text: "||";  expecting "<=", or "=", or "+=", or "-=", or "*=", or "/=", or "%=", or "&=", or "|=", or "^=", or "<<=", or ">>=", or "<<<=", or ">>>=", or "++", or "--". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 1924
+Error (10170): Verilog HDL syntax error at csr_regfile.sv(1924) near text: ")";  expecting "<=", or "=", or "+=", or "-=", or "*=", or "/=", or "%=", or "&=", or "|=", or "^=", or "<<=", or ">>=", or "<<<=", or ">>>=", or "++", or "--". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.sv Line: 1924
 Info (12021): Found 0 design units, including 0 entities, in source file core/csr_regfile.sv
 Error (10170): Verilog HDL syntax error at decoder.sv(26) near text: "type";  expecting an identifier ("type" is a reserved keyword ). Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.sv Line: 26
 Error (10170): Verilog HDL syntax error at decoder.sv(134) near text: "if";  expecting "endmodule". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.sv Line: 134
@@ -949,9 +954,9 @@ Error (10170): Verilog HDL syntax error at cvxif_fu.sv(18) near text: "type";  e
 Error (10112): Ignored design unit "cvxif_fu" at cvxif_fu.sv(14) due to previous errors File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvxif_fu.sv Line: 14
 Info (12021): Found 0 design units, including 0 entities, in source file core/cvxif_fu.sv
 Info (144001): Generated suppressed messages file /tools/C/eegr-463/idris.somoye/test_clone/output_files/ariane_cyclone.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 553 errors, 9 warnings
-    Error: Peak virtual memory: 659 megabytes
-    Error: Processing ended: Sat Sep 21 00:17:35 2024
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 554 errors, 10 warnings
+    Error: Peak virtual memory: 655 megabytes
+    Error: Processing ended: Sat Sep 21 19:57:41 2024
     Error: Elapsed time: 00:00:05
     Error: Total CPU time (on all processors): 00:00:14
 

@@ -276,10 +276,10 @@ module issue_stage_96801_23E55 (
 	// Trace: core/issue_stage.sv:180:3
 	wire [(CVA6Cfg[16841-:32] * CVA6Cfg[17102-:32]) - 1:0] rs2_forwarding_xlen;
 	// Trace: core/issue_stage.sv:182:3
-	genvar _gv_i_33;
+	genvar _gv_i_42;
 	generate
-		for (_gv_i_33 = 0; _gv_i_33 < CVA6Cfg[16841-:32]; _gv_i_33 = _gv_i_33 + 1) begin : genblk1
-			localparam i = _gv_i_33;
+		for (_gv_i_42 = 0; _gv_i_42 < CVA6Cfg[16841-:32]; _gv_i_42 = _gv_i_42 + 1) begin : genblk1
+			localparam i = _gv_i_42;
 			// Trace: core/issue_stage.sv:183:5
 			assign rs1_forwarding_o[i * CVA6Cfg[17070-:32]+:CVA6Cfg[17070-:32]] = rs1_forwarding_xlen[(i * CVA6Cfg[17102-:32]) + (CVA6Cfg[17070-:32] - 1)-:CVA6Cfg[17070-:32]];
 			// Trace: core/issue_stage.sv:184:5

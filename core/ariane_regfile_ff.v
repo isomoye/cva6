@@ -115,10 +115,10 @@ module ariane_regfile (
 			end
 	end
 	// Trace: core/ariane_regfile_ff.sv:79:3
-	genvar _gv_i_40;
+	genvar _gv_i_46;
 	generate
-		for (_gv_i_40 = 0; _gv_i_40 < NR_READ_PORTS; _gv_i_40 = _gv_i_40 + 1) begin : genblk1
-			localparam i = _gv_i_40;
+		for (_gv_i_46 = 0; _gv_i_46 < NR_READ_PORTS; _gv_i_46 = _gv_i_46 + 1) begin : genblk1
+			localparam i = _gv_i_46;
 			// Trace: core/ariane_regfile_ff.sv:80:5
 			assign rdata_o[i * DATA_WIDTH+:DATA_WIDTH] = mem[raddr_i[i * 5+:5] * DATA_WIDTH+:DATA_WIDTH];
 		end

@@ -451,10 +451,10 @@ module wt_dcache_wbuffer_7E3B8_2DD72 (
 	// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:229:3
 	assign wbuffer_data_o = wbuffer_q;
 	// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:231:3
-	genvar _gv_k_13;
+	genvar _gv_k_15;
 	generate
-		for (_gv_k_13 = 0; _gv_k_13 < CVA6Cfg[804-:32]; _gv_k_13 = _gv_k_13 + 1) begin : gen_tx_vld
-			localparam k = _gv_k_13;
+		for (_gv_k_15 = 0; _gv_k_15 < CVA6Cfg[804-:32]; _gv_k_15 = _gv_k_15 + 1) begin : gen_tx_vld
+			localparam k = _gv_k_15;
 			// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:232:5
 			assign tx_vld_o[k] = tx_stat_q[(k * ((1 + (CVA6Cfg[17102-:32] / 8)) + $clog2(CVA6Cfg[740-:32]))) + (1 + ((CVA6Cfg[17102-:32] / 8) + ($clog2(CVA6Cfg[740-:32]) - 1)))];
 			// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:233:5
@@ -677,10 +677,10 @@ module wt_dcache_wbuffer_7E3B8_2DD72 (
 	// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:410:3
 	assign wr_cl_idx_d = wr_cl_idx_i;
 	// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:412:3
-	genvar _gv_k_14;
+	genvar _gv_k_16;
 	generate
-		for (_gv_k_14 = 0; _gv_k_14 < CVA6Cfg[740-:32]; _gv_k_14 = _gv_k_14 + 1) begin : gen_flags
-			localparam k = _gv_k_14;
+		for (_gv_k_16 = 0; _gv_k_16 < CVA6Cfg[740-:32]; _gv_k_16 = _gv_k_16 + 1) begin : gen_flags
+			localparam k = _gv_k_16;
 			if (CVA6Cfg[1321]) begin : genblk1
 				// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:415:7
 				assign debug_paddr[k] = {{CVA6Cfg[16972-:32] {1'b0}}, wbuffer_q[(k * ((((((((wbuffer_t_CVA6Cfg[996-:32] + (wbuffer_t_CVA6Cfg[1028-:32] - wbuffer_t_CVA6Cfg[16972-:32])) + wbuffer_t_CVA6Cfg[17102-:32]) + wbuffer_t_CVA6Cfg[900-:32]) + (wbuffer_t_CVA6Cfg[17102-:32] / 8)) + (wbuffer_t_CVA6Cfg[17102-:32] / 8)) + (wbuffer_t_CVA6Cfg[17102-:32] / 8)) + 1) + wbuffer_t_CVA6Cfg[1092-:32])) + ((wbuffer_t_CVA6Cfg[996-:32] + (wbuffer_t_CVA6Cfg[1028-:32] - wbuffer_t_CVA6Cfg[16972-:32])) + (wbuffer_t_CVA6Cfg[17102-:32] + (wbuffer_t_CVA6Cfg[900-:32] + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + (wbuffer_t_CVA6Cfg[1092-:32] + 0)))))))-:(((wbuffer_t_CVA6Cfg[996-:32] + (wbuffer_t_CVA6Cfg[1028-:32] - wbuffer_t_CVA6Cfg[16972-:32])) + (wbuffer_t_CVA6Cfg[17102-:32] + (wbuffer_t_CVA6Cfg[900-:32] + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + (wbuffer_t_CVA6Cfg[1092-:32] + 0))))))) >= (wbuffer_t_CVA6Cfg[17102-:32] + (wbuffer_t_CVA6Cfg[900-:32] + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + (1 + (wbuffer_t_CVA6Cfg[1092-:32] + 0))))))) ? (((wbuffer_t_CVA6Cfg[996-:32] + (wbuffer_t_CVA6Cfg[1028-:32] - wbuffer_t_CVA6Cfg[16972-:32])) + (wbuffer_t_CVA6Cfg[17102-:32] + (wbuffer_t_CVA6Cfg[900-:32] + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + (wbuffer_t_CVA6Cfg[1092-:32] + 0))))))) - (wbuffer_t_CVA6Cfg[17102-:32] + (wbuffer_t_CVA6Cfg[900-:32] + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + (1 + (wbuffer_t_CVA6Cfg[1092-:32] + 0)))))))) + 1 : ((wbuffer_t_CVA6Cfg[17102-:32] + (wbuffer_t_CVA6Cfg[900-:32] + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + (1 + (wbuffer_t_CVA6Cfg[1092-:32] + 0))))))) - ((wbuffer_t_CVA6Cfg[996-:32] + (wbuffer_t_CVA6Cfg[1028-:32] - wbuffer_t_CVA6Cfg[16972-:32])) + (wbuffer_t_CVA6Cfg[17102-:32] + (wbuffer_t_CVA6Cfg[900-:32] + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + ((wbuffer_t_CVA6Cfg[17102-:32] / 8) + (wbuffer_t_CVA6Cfg[1092-:32] + 0)))))))) + 1)] << CVA6Cfg[16972-:32]};
@@ -1037,13 +1037,13 @@ module wt_dcache_wbuffer_7E3B8_2DD72 (
 	// 	$fatal(1, "[l1 dcache wbuffer] req_port_i.kill_req should not be asserted");
 	// end
 	// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:679:3
-	genvar _gv_k_15;
+	genvar _gv_k_17;
 	generate
-		for (_gv_k_15 = 0; _gv_k_15 < CVA6Cfg[740-:32]; _gv_k_15 = _gv_k_15 + 1) begin : gen_assert1
-			localparam k = _gv_k_15;
-			genvar _gv_j_5;
-			for (_gv_j_5 = 0; _gv_j_5 < (CVA6Cfg[17102-:32] / 8); _gv_j_5 = _gv_j_5 + 1) begin : gen_assert2
-				localparam j = _gv_j_5;
+		for (_gv_k_17 = 0; _gv_k_17 < CVA6Cfg[740-:32]; _gv_k_17 = _gv_k_17 + 1) begin : gen_assert1
+			localparam k = _gv_k_17;
+			genvar _gv_j_7;
+			for (_gv_j_7 = 0; _gv_j_7 < (CVA6Cfg[17102-:32] / 8); _gv_j_7 = _gv_j_7 + 1) begin : gen_assert2
+				localparam j = _gv_j_7;
 				// Trace: core/cache_subsystem/wt_dcache_wbuffer.sv:681:7
 				// removed an assertion item
 				// byteStates : assert property (@(posedge clk_i) disable iff (!rst_ni)

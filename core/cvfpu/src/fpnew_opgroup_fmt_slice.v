@@ -248,7 +248,7 @@ module fpnew_opgroup_fmt_slice_B2D7F_8C3BC (
 					assign lane_class_mask[lane * 10+:10] = 10'b0000000001;
 				end
 				else if (OpGroup == 2'd1) begin
-			
+					;
 				end
 				else if (OpGroup == 2'd2) begin : lane_instance
 					// Trace: core/cvfpu/src/fpnew_opgroup_fmt_slice.sv:171:9

@@ -223,9 +223,9 @@ module frontend_FEAA5_C53EA (
 			assign bht_prediction_shifted[0+:2] = (serving_unaligned ? bht_q : bht_prediction[addr[0 + ($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : ($clog2(CVA6Cfg[579-:32]) + ($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : 2 - $clog2(CVA6Cfg[579-:32]))) - 1)-:($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : 2 - $clog2(CVA6Cfg[579-:32]))] * 2+:2]);
 			// Trace: core/frontend/frontend.sv:181:5
 			assign btb_prediction_shifted[0+:1 + CVA6Cfg[17070-:32]] = (serving_unaligned ? btb_q : btb_prediction[addr[0 + ($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : ($clog2(CVA6Cfg[579-:32]) + ($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : 2 - $clog2(CVA6Cfg[579-:32]))) - 1)-:($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : 2 - $clog2(CVA6Cfg[579-:32]))] * (1 + CVA6Cfg[17070-:32])+:1 + CVA6Cfg[17070-:32]]);
-			genvar _gv_i_17;
-			for (_gv_i_17 = 1; _gv_i_17 < CVA6Cfg[579-:32]; _gv_i_17 = _gv_i_17 + 1) begin : gen_prediction_address
-				localparam i = _gv_i_17;
+			genvar _gv_i_66;
+			for (_gv_i_66 = 1; _gv_i_66 < CVA6Cfg[579-:32]; _gv_i_66 = _gv_i_66 + 1) begin : gen_prediction_address
+				localparam i = _gv_i_66;
 				// Trace: core/frontend/frontend.sv:188:7
 				assign bht_prediction_shifted[i * 2+:2] = bht_prediction[addr[(i * CVA6Cfg[17070-:32]) + ($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : ($clog2(CVA6Cfg[579-:32]) + ($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : 2 - $clog2(CVA6Cfg[579-:32]))) - 1)-:($clog2(CVA6Cfg[579-:32]) >= 1 ? $clog2(CVA6Cfg[579-:32]) : 2 - $clog2(CVA6Cfg[579-:32]))] * 2+:2];
 				// Trace: core/frontend/frontend.sv:189:7
@@ -252,10 +252,10 @@ module frontend_FEAA5_C53EA (
 	// Trace: core/frontend/frontend.sv:205:3
 	wire [CVA6Cfg[579-:32] - 1:0] is_jalr;
 	// Trace: core/frontend/frontend.sv:207:3
-	genvar _gv_i_18;
+	genvar _gv_i_67;
 	generate
-		for (_gv_i_18 = 0; _gv_i_18 < CVA6Cfg[579-:32]; _gv_i_18 = _gv_i_18 + 1) begin : genblk3
-			localparam i = _gv_i_18;
+		for (_gv_i_67 = 0; _gv_i_67 < CVA6Cfg[579-:32]; _gv_i_67 = _gv_i_67 + 1) begin : genblk3
+			localparam i = _gv_i_67;
 			// Trace: core/frontend/frontend.sv:209:5
 			assign is_branch[i] = instruction_valid[i] & (rvi_branch[i] | rvc_branch[i]);
 			// Trace: core/frontend/frontend.sv:211:5
@@ -651,10 +651,10 @@ module frontend_FEAA5_C53EA (
 		end
 	endgenerate
 	// Trace: core/frontend/frontend.sv:528:3
-	genvar _gv_i_19;
+	genvar _gv_i_68;
 	generate
-		for (_gv_i_19 = 0; _gv_i_19 < CVA6Cfg[579-:32]; _gv_i_19 = _gv_i_19 + 1) begin : gen_instr_scan
-			localparam i = _gv_i_19;
+		for (_gv_i_68 = 0; _gv_i_68 < CVA6Cfg[579-:32]; _gv_i_68 = _gv_i_68 + 1) begin : gen_instr_scan
+			localparam i = _gv_i_68;
 			// Trace: core/frontend/frontend.sv:529:5
 			instr_scan #(.CVA6Cfg(CVA6Cfg)) i_instr_scan(
 				.instr_i(instr[i * 32+:32]),

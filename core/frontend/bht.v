@@ -80,9 +80,9 @@ module bht_980B8_E74A8 (
 		if (!CVA6Cfg[16876]) begin : gen_asic_bht
 			// Trace: core/frontend/bht.sv:73:5
 			reg [1:0] saturation_counter;
-			genvar _gv_i_8;
-			for (_gv_i_8 = 0; _gv_i_8 < CVA6Cfg[579-:32]; _gv_i_8 = _gv_i_8 + 1) begin : gen_bht_output
-				localparam i = _gv_i_8;
+			genvar _gv_i_57;
+			for (_gv_i_57 = 0; _gv_i_57 < CVA6Cfg[579-:32]; _gv_i_57 = _gv_i_57 + 1) begin : gen_bht_output
+				localparam i = _gv_i_57;
 				// Trace: core/frontend/bht.sv:76:7
 				wire [1:1] sv2v_tmp_D2DA8;
 				assign sv2v_tmp_D2DA8 = bht_q[(((index * CVA6Cfg[579-:32]) + i) * 3) + 2];
@@ -308,9 +308,9 @@ module bht_980B8_E74A8 (
 							end
 					end
 			end
-			genvar _gv_i_9;
-			for (_gv_i_9 = 0; _gv_i_9 < CVA6Cfg[579-:32]; _gv_i_9 = _gv_i_9 + 1) begin : gen_bht_ram
-				localparam i = _gv_i_9;
+			genvar _gv_i_58;
+			for (_gv_i_58 = 0; _gv_i_58 < CVA6Cfg[579-:32]; _gv_i_58 = _gv_i_58 + 1) begin : gen_bht_ram
+				localparam i = _gv_i_58;
 				// Trace: core/frontend/bht.sv:205:7
 				AsyncThreePortRam #(
 					.ADDR_WIDTH($clog2(NR_ROWS)),

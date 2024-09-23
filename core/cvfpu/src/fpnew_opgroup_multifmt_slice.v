@@ -658,7 +658,7 @@ module fpnew_opgroup_multifmt_slice_983D9_76A82 (
 					);
 				end
 				else if (OpGroup == 2'd2) begin
-					
+					;
 				end
 				else if (OpGroup == 2'd3) begin : lane_instance
 					// Trace: core/cvfpu/src/fpnew_opgroup_multifmt_slice.sv:278:9
@@ -806,9 +806,9 @@ module fpnew_opgroup_multifmt_slice_983D9_76A82 (
 			wire [1:1] sv2v_tmp_967FD;
 			assign sv2v_tmp_967FD = in_valid_i & vectorial_op;
 			always @(*) byp_pipe_valid_q[0] = sv2v_tmp_967FD;
-			genvar _gv_i_71;
-			for (_gv_i_71 = 0; _gv_i_71 < NumPipeRegs; _gv_i_71 = _gv_i_71 + 1) begin : gen_bypass_pipeline
-				localparam i = _gv_i_71;
+			genvar _gv_i_23;
+			for (_gv_i_23 = 0; _gv_i_23 < NumPipeRegs; _gv_i_23 = _gv_i_23 + 1) begin : gen_bypass_pipeline
+				localparam i = _gv_i_23;
 				// Trace: core/cvfpu/src/fpnew_opgroup_multifmt_slice.sv:396:7
 				wire reg_ena;
 				// Trace: core/cvfpu/src/fpnew_opgroup_multifmt_slice.sv:400:7

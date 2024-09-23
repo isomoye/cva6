@@ -2934,13 +2934,13 @@ module control_mvp (
 	wire Sqrt_enable_SI [3:0];
 	// Trace: core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:2340:3
 	// Trace: core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:2341:5
-	genvar _gv_i_57;
-	genvar _gv_j_8;
+	genvar _gv_i_24;
+	genvar _gv_j_1;
 	generate
-		for (_gv_i_57 = 0; _gv_i_57 <= defs_div_sqrt_mvp_Iteration_unit_num_S; _gv_i_57 = _gv_i_57 + 1) begin : genblk4
-			localparam i = _gv_i_57;
-			for (_gv_j_8 = 0; _gv_j_8 <= 57; _gv_j_8 = _gv_j_8 + 1) begin : genblk1
-				localparam j = _gv_j_8;
+		for (_gv_i_24 = 0; _gv_i_24 <= defs_div_sqrt_mvp_Iteration_unit_num_S; _gv_i_24 = _gv_i_24 + 1) begin : genblk4
+			localparam i = _gv_i_24;
+			for (_gv_j_1 = 0; _gv_j_1 <= 57; _gv_j_1 = _gv_j_1 + 1) begin : genblk1
+				localparam j = _gv_j_1;
 				// Trace: core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:2345:15
 				assign Iteration_cell_a_D[i][j] = Mask_bits_ctl_S[j] && Iteration_cell_a_BMASK_D[i][j];
 				// Trace: core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.sv:2346:15

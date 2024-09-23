@@ -63,9 +63,9 @@ module multiplier (
 			assign clmul_rmode = operation_i == 8'd157;
 			// Trace: core/multiplier.sv:54:5
 			assign clmul_hmode = operation_i == 8'd156;
-			genvar _gv_i_38;
-			for (_gv_i_38 = 0; _gv_i_38 < CVA6Cfg[17102-:32]; _gv_i_38 = _gv_i_38 + 1) begin : genblk1
-				localparam i = _gv_i_38;
+			genvar _gv_i_44;
+			for (_gv_i_44 = 0; _gv_i_44 < CVA6Cfg[17102-:32]; _gv_i_44 = _gv_i_44 + 1) begin : genblk1
+				localparam i = _gv_i_44;
 				// Trace: core/multiplier.sv:58:7
 				assign operand_a_rev[i] = operand_a_i[(CVA6Cfg[17102-:32] - 1) - i];
 				// Trace: core/multiplier.sv:59:7
@@ -93,9 +93,9 @@ module multiplier (
 						end
 				end
 			end
-			genvar _gv_i_39;
-			for (_gv_i_39 = 0; _gv_i_39 < CVA6Cfg[17102-:32]; _gv_i_39 = _gv_i_39 + 1) begin : genblk2
-				localparam i = _gv_i_39;
+			genvar _gv_i_45;
+			for (_gv_i_45 = 0; _gv_i_45 < CVA6Cfg[17102-:32]; _gv_i_45 = _gv_i_45 + 1) begin : genblk2
+				localparam i = _gv_i_45;
 				// Trace: core/multiplier.sv:76:7
 				assign clmulr_d[i] = clmul_d[(CVA6Cfg[17102-:32] - 1) - i];
 			end

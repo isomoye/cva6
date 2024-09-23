@@ -215,7 +215,7 @@ module fpnew_divsqrt_multi_CCEC6_ACD03 (
 	// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:109:3
 	assign in_ready_o = inp_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:111:3
-	genvar _gv_i_61;
+	genvar _gv_i_13;
 	function automatic [3:0] sv2v_cast_4CD2E;
 		input reg [3:0] inp;
 		sv2v_cast_4CD2E = inp;
@@ -229,8 +229,8 @@ module fpnew_divsqrt_multi_CCEC6_ACD03 (
 		sv2v_cast_533F1 = inp;
 	endfunction
 	generate
-		for (_gv_i_61 = 0; _gv_i_61 < NUM_INP_REGS; _gv_i_61 = _gv_i_61 + 1) begin : gen_input_pipeline
-			localparam i = _gv_i_61;
+		for (_gv_i_13 = 0; _gv_i_13 < NUM_INP_REGS; _gv_i_13 = _gv_i_13 + 1) begin : gen_input_pipeline
+			localparam i = _gv_i_13;
 			// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:113:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:117:5
@@ -620,10 +620,10 @@ module fpnew_divsqrt_multi_CCEC6_ACD03 (
 	// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:335:3
 	assign out_ready = out_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:337:3
-	genvar _gv_i_62;
+	genvar _gv_i_14;
 	generate
-		for (_gv_i_62 = 0; _gv_i_62 < NUM_OUT_REGS; _gv_i_62 = _gv_i_62 + 1) begin : gen_output_pipeline
-			localparam i = _gv_i_62;
+		for (_gv_i_14 = 0; _gv_i_14 < NUM_OUT_REGS; _gv_i_14 = _gv_i_14 + 1) begin : gen_output_pipeline
+			localparam i = _gv_i_14;
 			// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:339:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_divsqrt_multi.sv:343:5

@@ -264,10 +264,10 @@ module wt_cache_subsystem_69836_EAB39 (
 	// 	$warning(1, "[l1 dcache] reading invalid instructions: vaddr=%08X, data=%08X", icache_dreq_o.vaddr, icache_dreq_o.data);
 	// end
 	// Trace: core/cache_subsystem/wt_cache_subsystem.sv:254:3
-	genvar _gv_j_6;
+	genvar _gv_j_8;
 	generate
-		for (_gv_j_6 = 0; _gv_j_6 < (CVA6Cfg[17102-:32] / 8); _gv_j_6 = _gv_j_6 + 1) begin : gen_invalid_write_assertion
-			localparam j = _gv_j_6;
+		for (_gv_j_8 = 0; _gv_j_8 < (CVA6Cfg[17102-:32] / 8); _gv_j_8 = _gv_j_8 + 1) begin : gen_invalid_write_assertion
+			localparam j = _gv_j_8;
 			// Trace: core/cache_subsystem/wt_cache_subsystem.sv:255:5
 			// removed an assertion item
 			// a_invalid_write_data : assert property (@(posedge clk_i) disable iff (!rst_ni)
@@ -279,10 +279,10 @@ module wt_cache_subsystem_69836_EAB39 (
 		end
 	endgenerate
 	// Trace: core/cache_subsystem/wt_cache_subsystem.sv:272:3
-	genvar _gv_j_7;
+	genvar _gv_j_9;
 	generate
-		for (_gv_j_7 = 0; _gv_j_7 < (NumPorts - 1); _gv_j_7 = _gv_j_7 + 1) begin : gen_assertion
-			localparam j = _gv_j_7;
+		for (_gv_j_9 = 0; _gv_j_9 < (NumPorts - 1); _gv_j_9 = _gv_j_9 + 1) begin : gen_assertion
+			localparam j = _gv_j_9;
 			// Trace: core/cache_subsystem/wt_cache_subsystem.sv:273:5
 			// removed an assertion item
 			// a_invalid_read_data : assert property (@(posedge clk_i) disable iff (!rst_ni)

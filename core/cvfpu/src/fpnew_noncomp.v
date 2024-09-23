@@ -191,7 +191,7 @@ module fpnew_noncomp_E1895_77336 (
 	// Trace: core/cvfpu/src/fpnew_noncomp.sv:111:3
 	assign in_ready_o = inp_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_noncomp.sv:113:3
-	genvar _gv_i_69;
+	genvar _gv_i_21;
 	function automatic [3:0] sv2v_cast_4CD2E;
 		input reg [3:0] inp;
 		sv2v_cast_4CD2E = inp;
@@ -201,8 +201,8 @@ module fpnew_noncomp_E1895_77336 (
 		sv2v_cast_65D85 = inp;
 	endfunction
 	generate
-		for (_gv_i_69 = 0; _gv_i_69 < NUM_INP_REGS; _gv_i_69 = _gv_i_69 + 1) begin : gen_input_pipeline
-			localparam i = _gv_i_69;
+		for (_gv_i_21 = 0; _gv_i_21 < NUM_INP_REGS; _gv_i_21 = _gv_i_21 + 1) begin : gen_input_pipeline
+			localparam i = _gv_i_21;
 			// Trace: core/cvfpu/src/fpnew_noncomp.sv:115:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_noncomp.sv:119:5
@@ -642,10 +642,10 @@ module fpnew_noncomp_E1895_77336 (
 	// Trace: core/cvfpu/src/fpnew_noncomp.sv:379:3
 	assign inp_pipe_ready[NUM_INP_REGS] = out_pipe_ready[0];
 	// Trace: core/cvfpu/src/fpnew_noncomp.sv:381:3
-	genvar _gv_i_70;
+	genvar _gv_i_22;
 	generate
-		for (_gv_i_70 = 0; _gv_i_70 < NUM_OUT_REGS; _gv_i_70 = _gv_i_70 + 1) begin : gen_output_pipeline
-			localparam i = _gv_i_70;
+		for (_gv_i_22 = 0; _gv_i_22 < NUM_OUT_REGS; _gv_i_22 = _gv_i_22 + 1) begin : gen_output_pipeline
+			localparam i = _gv_i_22;
 			// Trace: core/cvfpu/src/fpnew_noncomp.sv:383:5
 			wire reg_ena;
 			// Trace: core/cvfpu/src/fpnew_noncomp.sv:387:5

@@ -99,7 +99,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/tech_cells_
 set_global_assignment -name SYSTEMVERILOG_FILE common/local/util/tc_sram_wrapper.v
 set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.v"
 set_global_assignment -name SYSTEMVERILOG_FILE "vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v"
-set_global_assignment -name SYSTEMVERILOG_FILE core/cache_subsystem/axi_adapter.v
 set_global_assignment -name SYSTEMVERILOG_FILE core/alu.v
 set_global_assignment -name SYSTEMVERILOG_FILE core/fpu_wrap.v
 set_global_assignment -name SYSTEMVERILOG_FILE corev_apu/src/ariane.v
