@@ -120,9 +120,12 @@ package wt_cache_pkg;
 
   function automatic logic [5:0] popcnt64(input logic [63:0] in);
     logic [5:0] cnt = 0;
-    foreach (in[k]) begin
+    for (int k = 0; k < 64; k++) begin
       cnt += 6'(in[k]);
     end
+    // foreach (in[k]) begin
+      // cnt += 6'(in[k]);
+    // end
     return cnt;
   endfunction : popcnt64
 

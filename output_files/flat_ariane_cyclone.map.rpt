@@ -1,0 +1,772 @@
+Analysis & Synthesis report for flat_ariane_cyclone
+Sat Sep 21 22:44:13 2024
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Sat Sep 21 22:44:13 2024           ;
+; Quartus Prime Version       ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Revision Name               ; flat_ariane_cyclone                         ;
+; Top-level Entity Name       ; ariane                                      ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                              ;
++---------------------------------------------------------------------------------+--------------------+---------------------+
+; Option                                                                          ; Setting            ; Default Value       ;
++---------------------------------------------------------------------------------+--------------------+---------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                     ;
+; Top-level entity name                                                           ; ariane             ; flat_ariane_cyclone ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V           ;
+; Use smart compilation                                                           ; Off                ; Off                 ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                  ;
+; Enable compact report table                                                     ; Off                ; Off                 ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto                ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                 ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                 ;
+; Preserve fewer node names                                                       ; On                 ; On                  ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable              ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001        ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993           ;
+; State Machine Processing                                                        ; Auto               ; Auto                ;
+; Safe State Machine                                                              ; Off                ; Off                 ;
+; Extract Verilog State Machines                                                  ; On                 ; On                  ;
+; Extract VHDL State Machines                                                     ; On                 ; On                  ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                 ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000                ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                 ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                  ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                  ;
+; Parallel Synthesis                                                              ; On                 ; On                  ;
+; DSP Block Balancing                                                             ; Auto               ; Auto                ;
+; NOT Gate Push-Back                                                              ; On                 ; On                  ;
+; Power-Up Don't Care                                                             ; On                 ; On                  ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                 ;
+; Remove Duplicate Registers                                                      ; On                 ; On                  ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                 ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                 ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                 ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                 ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                 ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                  ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                 ;
+; Optimization Technique                                                          ; Balanced           ; Balanced            ;
+; Carry Chain Length                                                              ; 70                 ; 70                  ;
+; Auto Carry Chains                                                               ; On                 ; On                  ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                  ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                 ;
+; Auto ROM Replacement                                                            ; On                 ; On                  ;
+; Auto RAM Replacement                                                            ; On                 ; On                  ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                  ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto                ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto                ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                  ;
+; Strict RAM Replacement                                                          ; Off                ; Off                 ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                  ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                 ;
+; Auto Resource Sharing                                                           ; Off                ; Off                 ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                 ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                 ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                 ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                  ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                 ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                  ;
+; Report Parameter Settings                                                       ; On                 ; On                  ;
+; Report Source Assignments                                                       ; On                 ; On                  ;
+; Report Connectivity Checks                                                      ; On                 ; On                  ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                 ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                   ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation  ;
+; HDL message level                                                               ; Level2             ; Level2              ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                 ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000                ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000                ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                 ;
+; Clock MUX Protection                                                            ; On                 ; On                  ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                 ;
+; Block Design Naming                                                             ; Auto               ; Auto                ;
+; SDC constraint protection                                                       ; Off                ; Off                 ;
+; Synthesis Effort                                                                ; Auto               ; Auto                ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                  ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                 ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium              ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto                ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                  ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                 ;
++---------------------------------------------------------------------------------+--------------------+---------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 128         ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Sat Sep 21 22:43:21 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ariane_cyclone -c flat_ariane_cyclone
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 16 of the 64 processors detected
+Info (12021): Found 0 design units, including 0 entities, in source file core/include/cv64a6_imafdc_sv39_openpiton_config_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file core/include/riscv_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/riscv-dbg/src/dm_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file core/cvfpu/src/fpnew_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file core/include/ariane_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/tb/ariane_soc_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file vendor/pulp-platform/axi/src/axi_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/tb/ariane_axi_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file core/include/wt_cache_pkg.v
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/tb/axi_intf.v
+Info (12021): Found 0 design units, including 0 entities, in source file vendor/pulp-platform/common_cells/src/cf_math_pkg.v
+Warning (12019): Can't analyze file -- file core/include/instr_tracer_pkg.v is missing
+Info (12021): Found 0 design units, including 0 entities, in source file core/cvxif_example/include/cvxif_instr_pkg.v
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/acc_dispatcher.v(211) File: /tools/C/eegr-463/idris.somoye/test_clone/core/acc_dispatcher.v Line: 211
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/acc_dispatcher.v(211) File: /tools/C/eegr-463/idris.somoye/test_clone/core/acc_dispatcher.v Line: 211
+Info (12021): Found 1 design units, including 1 entities, in source file core/acc_dispatcher.v
+    Info (12023): Found entity 1: acc_dispatcher_BA9A3_5F027 File: /tools/C/eegr-463/idris.somoye/test_clone/core/acc_dispatcher.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/rv_plic/rtl/rv_plic_reg_pkg.v
+Info (12021): Found 1 design units, including 1 entities, in source file common/local/util/sram.v
+    Info (12023): Found entity 1: sram File: /tools/C/eegr-463/idris.somoye/test_clone/common/local/util/sram.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/deprecated/rrarbiter.v
+    Info (12023): Found entity 1: rrarbiter File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/deprecated/rrarbiter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/deprecated/fifo_v1.v
+    Info (12023): Found entity 1: fifo File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/deprecated/fifo_v1.v Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file vendor/pulp-platform/common_cells/src/deprecated/fifo_v2.v
+    Info (12023): Found entity 1: fifo_v2_264A2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/deprecated/fifo_v2.v Line: 1
+    Info (12023): Found entity 2: fifo_v2_2D55D_D5824 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/deprecated/fifo_v2.v Line: 90
+Info (12021): Found 2 design units, including 2 entities, in source file vendor/pulp-platform/common_cells/src/fifo_v3.v
+    Info (12023): Found entity 1: fifo_v3_19420_E888C File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/fifo_v3.v Line: 1
+    Info (12023): Found entity 2: fifo_v3_4D453 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/fifo_v3.v Line: 198
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/shift_reg.v
+    Info (12023): Found entity 1: shift_reg_400DE_F5F53 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/shift_reg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/lfsr_8bit.v
+    Info (12023): Found entity 1: lfsr_8bit File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/lfsr_8bit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/lfsr.v
+    Info (12023): Found entity 1: lfsr File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/lfsr.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/lzc.v
+    Info (12023): Found entity 1: lzc File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/lzc.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/exp_backoff.v
+    Info (12023): Found entity 1: exp_backoff File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/exp_backoff.v Line: 1
+Info (12021): Found 5 design units, including 5 entities, in source file vendor/pulp-platform/common_cells/src/rr_arb_tree.v
+    Info (12023): Found entity 1: rr_arb_tree File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/rr_arb_tree.v Line: 1
+    Info (12023): Found entity 2: rr_arb_tree_ED597 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/rr_arb_tree.v Line: 352
+    Info (12023): Found entity 3: rr_arb_tree_46107_99662 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/rr_arb_tree.v Line: 699
+    Info (12023): Found entity 4: rr_arb_tree_11E95_B691C File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/rr_arb_tree.v Line: 1052
+    Info (12023): Found entity 5: rr_arb_tree_1227C_AFDD0 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/rr_arb_tree.v Line: 1409
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/rstgen_bypass.v
+    Info (12023): Found entity 1: rstgen_bypass File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/rstgen_bypass.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(36) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 36
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(38) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 38
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(40) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 40
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(99) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 99
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(101) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 101
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(103) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 103
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(156) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 156
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(157) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 157
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(158) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 158
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(160) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 160
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(227) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 227
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(228) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 228
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(229) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 229
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(231) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 231
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(298) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 298
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(298) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 298
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(299) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 299
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(299) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 299
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(300) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 300
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(300) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 300
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(301) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 301
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(301) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 301
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(303) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 303
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(377) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 377
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(377) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 377
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(378) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 378
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(378) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 378
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(379) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 379
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(379) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 379
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(380) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 380
+Warning (10335): Unrecognized synthesis attribute "async_reg" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(380) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 380
+Warning (10335): Unrecognized synthesis attribute "dont_touch" at vendor/pulp-platform/common_cells/src/cdc_2phase.v(382) File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 382
+Info (12021): Found 6 design units, including 6 entities, in source file vendor/pulp-platform/common_cells/src/cdc_2phase.v
+    Info (12023): Found entity 1: cdc_2phase_1A17D File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 1
+    Info (12023): Found entity 2: cdc_2phase_ED5E8 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 64
+    Info (12023): Found entity 3: cdc_2phase_src_595FC File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 127
+    Info (12023): Found entity 4: cdc_2phase_src_6CED9 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 198
+    Info (12023): Found entity 5: cdc_2phase_dst_3DD18 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 269
+    Info (12023): Found entity 6: cdc_2phase_dst_694ED File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/cdc_2phase.v Line: 348
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/unread.v
+    Info (12023): Found entity 1: unread File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/unread.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/popcount.v
+    Info (12023): Found entity 1: popcount File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/popcount.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/axi_mem_if/src/axi2mem.v
+Info (12021): Found 6 design units, including 6 entities, in source file vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.v
+    Info (12023): Found entity 1: cluster_clock_and2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.v Line: 1
+    Info (12023): Found entity 2: cluster_clock_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.v Line: 19
+    Info (12023): Found entity 3: cluster_clock_gating File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.v Line: 33
+    Info (12023): Found entity 4: cluster_clock_inverter File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.v Line: 55
+    Info (12023): Found entity 5: cluster_clock_mux2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.v Line: 69
+    Info (12023): Found entity 6: cluster_clock_xor2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/cluster_clk_cells.v Line: 91
+Info (12021): Found 7 design units, including 7 entities, in source file vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v
+    Info (12023): Found entity 1: pulp_clock_and2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v Line: 1
+    Info (12023): Found entity 2: pulp_clock_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v Line: 19
+    Info (12023): Found entity 3: pulp_clock_gating File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v Line: 33
+    Info (12023): Found entity 4: pulp_clock_inverter File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v Line: 55
+    Info (12023): Found entity 5: pulp_clock_mux2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v Line: 69
+    Info (12023): Found entity 6: pulp_clock_xor2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v Line: 91
+    Info (12023): Found entity 7: pulp_clock_delay File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/deprecated/pulp_clk_cells.v Line: 109
+Info (12021): Found 1 design units, including 1 entities, in source file common/local/util/tc_sram_wrapper.v
+    Info (12023): Found entity 1: tc_sram_wrapper File: /tools/C/eegr-463/idris.somoye/test_clone/common/local/util/tc_sram_wrapper.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.v
+    Info (12023): Found entity 1: tc_sram File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_sram.v Line: 1
+Info (12021): Found 8 design units, including 8 entities, in source file vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v
+    Info (12023): Found entity 1: tc_clk_and2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 1
+    Info (12023): Found entity 2: tc_clk_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 15
+    Info (12023): Found entity 3: tc_clk_gating File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 26
+    Info (12023): Found entity 4: tc_clk_inverter File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 58
+    Info (12023): Found entity 5: tc_clk_mux2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 69
+    Info (12023): Found entity 6: tc_clk_xor2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 86
+    Info (12023): Found entity 7: tc_clk_or2 File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 100
+    Info (12023): Found entity 8: tc_clk_delay File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/tech_cells_generic/src/rtl/tc_clk.v Line: 114
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(96) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 96
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(96) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 96
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(116) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 116
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(116) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 116
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(136) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 136
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(136) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 136
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(330) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 330
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(330) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 330
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(344) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 344
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(344) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 344
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(377) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 377
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(377) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 377
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(392) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 392
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(392) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 392
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/alu.v(453) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 453
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/alu.v(453) File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 453
+Info (12021): Found 1 design units, including 1 entities, in source file core/alu.v
+    Info (12023): Found entity 1: alu_4BFF1_9AA73 File: /tools/C/eegr-463/idris.somoye/test_clone/core/alu.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(252) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 252
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(252) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 252
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(274) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 274
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(274) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 274
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(335) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 335
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(335) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 335
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(370) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 370
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(370) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 370
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(403) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 403
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(403) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 403
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(421) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 421
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(421) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 421
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(613) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 613
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(613) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 613
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(629) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 629
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(629) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 629
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/fpu_wrap.v(661) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 661
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/fpu_wrap.v(661) File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 661
+Info (12021): Found 1 design units, including 1 entities, in source file core/fpu_wrap.v
+    Info (12023): Found entity 1: fpu_wrap_9D6B1_657CE File: /tools/C/eegr-463/idris.somoye/test_clone/core/fpu_wrap.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/src/ariane.v
+    Info (12023): Found entity 1: ariane File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cva6.v
+    Info (12023): Found entity 1: cva6 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cva6.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/branch_unit.v(81) File: /tools/C/eegr-463/idris.somoye/test_clone/core/branch_unit.v Line: 81
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/branch_unit.v(81) File: /tools/C/eegr-463/idris.somoye/test_clone/core/branch_unit.v Line: 81
+Info (12021): Found 1 design units, including 1 entities, in source file core/branch_unit.v
+    Info (12023): Found entity 1: branch_unit_FFB66_4F10C File: /tools/C/eegr-463/idris.somoye/test_clone/core/branch_unit.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(79) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 79
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(79) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 79
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(83) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 83
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(83) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 83
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(121) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 121
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(121) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 121
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(180) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 180
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(180) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 180
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(217) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 217
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(217) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 217
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(227) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 227
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(227) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 227
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(272) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 272
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(272) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 272
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/compressed_decoder.v(346) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 346
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/compressed_decoder.v(346) File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 346
+Info (12021): Found 1 design units, including 1 entities, in source file core/compressed_decoder.v
+    Info (12023): Found entity 1: compressed_decoder File: /tools/C/eegr-463/idris.somoye/test_clone/core/compressed_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/controller.v
+    Info (12023): Found entity 1: controller_AD18E_A90D3 File: /tools/C/eegr-463/idris.somoye/test_clone/core/controller.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/csr_buffer.v
+    Info (12023): Found entity 1: csr_buffer_18CED_ECF93 File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_buffer.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/csr_regfile.v(564) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 564
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/csr_regfile.v(564) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 564
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/csr_regfile.v(620) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 620
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/csr_regfile.v(620) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 620
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/csr_regfile.v(1460) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 1460
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/csr_regfile.v(1460) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 1460
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/csr_regfile.v(2366) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 2366
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/csr_regfile.v(2366) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 2366
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/csr_regfile.v(2607) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 2607
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/csr_regfile.v(2607) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 2607
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/csr_regfile.v(2921) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 2921
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/csr_regfile.v(2921) File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 2921
+Info (12021): Found 1 design units, including 1 entities, in source file core/csr_regfile.v
+    Info (12023): Found entity 1: csr_regfile_E0FE8_5021F File: /tools/C/eegr-463/idris.somoye/test_clone/core/csr_regfile.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(306) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 306
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(306) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 306
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(502) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 502
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(502) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 502
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(678) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 678
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(678) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 678
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(742) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 742
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(742) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 742
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(778) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 778
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(778) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 778
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(867) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 867
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(867) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 867
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(907) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 907
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(907) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 907
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(937) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 937
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(937) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 937
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(977) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 977
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(977) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 977
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1002) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1002
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1002) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1002
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1030) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1030
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1030) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1030
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1058) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1058
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1058) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1058
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1120) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1120
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1120) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1120
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1193) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1193
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1193) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1193
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1205) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1205
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1205) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1205
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1233) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1233
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1233) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1233
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1271) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1271
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1271) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1271
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1324) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1324
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1324) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1324
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1373) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1373
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1373) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1373
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1455) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1455
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1455) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1455
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1485) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1485
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1485) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1485
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1545) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1545
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1545) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1545
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1584) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1584
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1584) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1584
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1638) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1638
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1638) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1638
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1694) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1694
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1694) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1694
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1754) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1754
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1754) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1754
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1769) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1769
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1769) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1769
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1794) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1794
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1794) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1794
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1802) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1802
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1802) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1802
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1812) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1812
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1812) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1812
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1843) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1843
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1843) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1843
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(1930) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1930
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(1930) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1930
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(2035) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2035
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(2035) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2035
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(2060) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2060
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(2060) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2060
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(2068) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2068
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(2068) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2068
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(2078) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2078
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(2078) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2078
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(2107) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2107
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(2107) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2107
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/decoder.v(2153) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2153
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/decoder.v(2153) File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 2153
+Info (12021): Found 1 design units, including 1 entities, in source file core/decoder.v
+    Info (12023): Found entity 1: decoder_8988B_DD31A File: /tools/C/eegr-463/idris.somoye/test_clone/core/decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/ex_stage.v
+    Info (12023): Found entity 1: ex_stage_F40F2_C6BD8 File: /tools/C/eegr-463/idris.somoye/test_clone/core/ex_stage.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/frontend/btb.v
+    Info (12023): Found entity 1: btb_C3780_5CA66 File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/btb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/frontend/bht.v
+    Info (12023): Found entity 1: bht_980B8_E74A8 File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/bht.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/frontend/ras.v
+    Info (12023): Found entity 1: ras_091E3_171B5 File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/ras.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/frontend/instr_scan.v
+    Info (12023): Found entity 1: instr_scan File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/instr_scan.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/frontend/instr_queue.v
+    Info (12023): Found entity 1: instr_queue_F2351_A36A8 File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/instr_queue.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/frontend/frontend.v(305) File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/frontend.v Line: 305
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/frontend/frontend.v(305) File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/frontend.v Line: 305
+Info (12021): Found 1 design units, including 1 entities, in source file core/frontend/frontend.v
+    Info (12023): Found entity 1: frontend_FEAA5_C53EA File: /tools/C/eegr-463/idris.somoye/test_clone/core/frontend/frontend.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/id_stage.v
+    Info (12023): Found entity 1: id_stage_800F6_0B515 File: /tools/C/eegr-463/idris.somoye/test_clone/core/id_stage.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/instr_realign.v
+    Info (12023): Found entity 1: instr_realign File: /tools/C/eegr-463/idris.somoye/test_clone/core/instr_realign.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/issue_read_operands.v(458) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 458
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/issue_read_operands.v(458) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 458
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/issue_read_operands.v(541) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 541
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/issue_read_operands.v(541) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 541
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/issue_read_operands.v(575) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 575
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/issue_read_operands.v(575) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 575
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/issue_read_operands.v(599) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 599
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/issue_read_operands.v(599) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 599
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/issue_read_operands.v(609) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 609
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/issue_read_operands.v(609) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 609
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/issue_read_operands.v(619) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 619
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/issue_read_operands.v(619) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 619
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/issue_read_operands.v(629) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 629
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/issue_read_operands.v(629) File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 629
+Info (12021): Found 1 design units, including 1 entities, in source file core/issue_read_operands.v
+    Info (12023): Found entity 1: issue_read_operands_4D22F_F1489 File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/issue_stage.v
+    Info (12023): Found entity 1: issue_stage_AED9A_9324A File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_stage.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/load_unit.v(609) File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_unit.v Line: 609
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/load_unit.v(609) File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_unit.v Line: 609
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/load_unit.v(624) File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_unit.v Line: 624
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/load_unit.v(624) File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_unit.v Line: 624
+Info (12021): Found 1 design units, including 1 entities, in source file core/load_unit.v
+    Info (12023): Found entity 1: load_unit_BE1C9_7E14E File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_unit.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/load_store_unit.v(625) File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_store_unit.v Line: 625
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/load_store_unit.v(625) File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_store_unit.v Line: 625
+Info (12021): Found 1 design units, including 1 entities, in source file core/load_store_unit.v
+    Info (12023): Found entity 1: load_store_unit_AA78E_0358B File: /tools/C/eegr-463/idris.somoye/test_clone/core/load_store_unit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/lsu_bypass.v
+    Info (12023): Found entity 1: lsu_bypass_0E76B_05199 File: /tools/C/eegr-463/idris.somoye/test_clone/core/lsu_bypass.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cva6_mmu/cva6_mmu.v
+    Info (12023): Found entity 1: cva6_mmu_A7BB5_88A65 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cva6_mmu/cva6_mmu.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cva6_mmu/cva6_ptw.v
+    Info (12023): Found entity 1: cva6_ptw_64D51_BD1CF File: /tools/C/eegr-463/idris.somoye/test_clone/core/cva6_mmu/cva6_ptw.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cva6_mmu/cva6_shared_tlb.v
+    Info (12023): Found entity 1: cva6_shared_tlb_030F9_C8937 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cva6_mmu/cva6_shared_tlb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cva6_mmu/cva6_tlb.v
+    Info (12023): Found entity 1: cva6_tlb_DDFD6_A1F50 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cva6_mmu/cva6_tlb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/mult.v
+    Info (12023): Found entity 1: mult_69FEA_E3F06 File: /tools/C/eegr-463/idris.somoye/test_clone/core/mult.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/multiplier.v(167) File: /tools/C/eegr-463/idris.somoye/test_clone/core/multiplier.v Line: 167
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/multiplier.v(167) File: /tools/C/eegr-463/idris.somoye/test_clone/core/multiplier.v Line: 167
+Info (12021): Found 1 design units, including 1 entities, in source file core/multiplier.v
+    Info (12023): Found entity 1: multiplier File: /tools/C/eegr-463/idris.somoye/test_clone/core/multiplier.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/serdiv.v(207) File: /tools/C/eegr-463/idris.somoye/test_clone/core/serdiv.v Line: 207
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/serdiv.v(207) File: /tools/C/eegr-463/idris.somoye/test_clone/core/serdiv.v Line: 207
+Info (12021): Found 1 design units, including 1 entities, in source file core/serdiv.v
+    Info (12023): Found entity 1: serdiv File: /tools/C/eegr-463/idris.somoye/test_clone/core/serdiv.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/perf_counters.v
+    Info (12023): Found entity 1: perf_counters_68487_73CC7 File: /tools/C/eegr-463/idris.somoye/test_clone/core/perf_counters.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/ariane_regfile_ff.v
+    Info (12023): Found entity 1: ariane_regfile File: /tools/C/eegr-463/idris.somoye/test_clone/core/ariane_regfile_ff.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/scoreboard.v(266) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 266
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/scoreboard.v(266) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 266
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/scoreboard.v(574) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 574
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/scoreboard.v(574) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 574
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/scoreboard.v(584) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 584
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/scoreboard.v(584) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 584
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/scoreboard.v(594) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 594
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/scoreboard.v(594) File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 594
+Info (12021): Found 1 design units, including 1 entities, in source file core/scoreboard.v
+    Info (12023): Found entity 1: scoreboard_20CF9_053D6 File: /tools/C/eegr-463/idris.somoye/test_clone/core/scoreboard.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/store_buffer.v
+    Info (12023): Found entity 1: store_buffer_AA2E5_FDA9C File: /tools/C/eegr-463/idris.somoye/test_clone/core/store_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/amo_buffer.v
+    Info (12023): Found entity 1: amo_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/core/amo_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/store_unit.v
+    Info (12023): Found entity 1: store_unit_8E701_A94D3 File: /tools/C/eegr-463/idris.somoye/test_clone/core/store_unit.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/commit_stage.v(146) File: /tools/C/eegr-463/idris.somoye/test_clone/core/commit_stage.v Line: 146
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/commit_stage.v(146) File: /tools/C/eegr-463/idris.somoye/test_clone/core/commit_stage.v Line: 146
+Info (12021): Found 1 design units, including 1 entities, in source file core/commit_stage.v
+    Info (12023): Found entity 1: commit_stage_309F0_F5630 File: /tools/C/eegr-463/idris.somoye/test_clone/core/commit_stage.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_ctrl.v(246) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_ctrl.v Line: 246
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_ctrl.v(246) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_ctrl.v Line: 246
+Info (12021): Found 1 design units, including 1 entities, in source file core/cache_subsystem/wt_dcache_ctrl.v
+    Info (12023): Found entity 1: wt_dcache_ctrl_2927B_4187A File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_ctrl.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cache_subsystem/wt_dcache_mem.v
+    Info (12023): Found entity 1: wt_dcache_mem_710D7_EEAC2 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_mem.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_missunit.v(178) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_missunit.v Line: 178
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_missunit.v(178) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_missunit.v Line: 178
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_missunit.v(519) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_missunit.v Line: 519
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_missunit.v(519) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_missunit.v Line: 519
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_missunit.v(627) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_missunit.v Line: 627
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_missunit.v(627) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_missunit.v Line: 627
+Info (12021): Found 1 design units, including 1 entities, in source file core/cache_subsystem/wt_dcache_missunit.v
+    Info (12023): Found entity 1: wt_dcache_missunit_AE121_53AFD File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_missunit.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_wbuffer.v(160) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 160
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_wbuffer.v(160) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 160
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_wbuffer.v(190) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 190
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_wbuffer.v(190) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 190
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_wbuffer.v(217) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 217
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_wbuffer.v(217) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 217
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_wbuffer.v(268) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 268
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_wbuffer.v(268) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 268
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_wbuffer.v(484) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 484
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_wbuffer.v(484) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 484
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/wt_dcache_wbuffer.v(506) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 506
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/wt_dcache_wbuffer.v(506) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 506
+Info (12021): Found 1 design units, including 1 entities, in source file core/cache_subsystem/wt_dcache_wbuffer.v
+    Info (12023): Found entity 1: wt_dcache_wbuffer_7E3B8_2DD72 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache_wbuffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cache_subsystem/wt_dcache.v
+    Info (12023): Found entity 1: wt_dcache_FC8CF_DE568 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_dcache.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/cva6_icache.v(328) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.v Line: 328
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/cva6_icache.v(328) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.v Line: 328
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cache_subsystem/cva6_icache.v(1040) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.v Line: 1040
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cache_subsystem/cva6_icache.v(1040) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.v Line: 1040
+Info (12021): Found 2 design units, including 2 entities, in source file core/cache_subsystem/cva6_icache.v
+    Info (12023): Found entity 1: cva6_icache_CA401_5F806 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.v Line: 1
+    Info (12023): Found entity 2: cva6_icache_688DF File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache.v Line: 725
+Info (12021): Found 1 design units, including 1 entities, in source file core/cache_subsystem/cva6_icache_axi_wrapper.v
+    Info (12023): Found entity 1: cva6_icache_axi_wrapper File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/cva6_icache_axi_wrapper.v Line: 1
+Warning (12019): Can't analyze file -- file core/cache_subsystem/wt_l15_adapter.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file core/cache_subsystem/wt_cache_subsystem.v
+    Info (12023): Found entity 1: wt_cache_subsystem_69836_EAB39 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/wt_cache_subsystem.v Line: 1
+Info (12021): Found 3 design units, including 3 entities, in source file corev_apu/clint/clint.v
+    Info (12023): Found entity 1: clint File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/clint/clint.v Line: 1
+    Info (12023): Found entity 2: clint_sync_wedge File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/clint/clint.v Line: 370
+    Info (12023): Found entity 3: clint_sync File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/clint/clint.v Line: 418
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/clint/axi_lite_interface.v
+    Info (12023): Found entity 1: axi_lite_interface_A3ED6_BC07D File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/clint/axi_lite_interface.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/debug_rom/debug_rom.v
+    Info (12023): Found entity 1: debug_rom File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/debug_rom/debug_rom.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_csrs.v(547) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_csrs.v Line: 547
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_csrs.v(547) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_csrs.v Line: 547
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_csrs.v(639) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_csrs.v Line: 639
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_csrs.v(639) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_csrs.v Line: 639
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/src/dm_csrs.v
+    Info (12023): Found entity 1: dm_csrs File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_csrs.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_mem.v(233) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 233
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_mem.v(233) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 233
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_mem.v(375) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 375
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_mem.v(375) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 375
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_mem.v(415) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 415
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_mem.v(415) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 415
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_mem.v(596) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 596
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_mem.v(596) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 596
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/src/dm_mem.v
+    Info (12023): Found entity 1: dm_mem File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_mem.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/src/dm_top.v
+    Info (12023): Found entity 1: dm_top File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/src/dmi_cdc.v
+    Info (12023): Found entity 1: dmi_cdc File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_cdc.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dmi_jtag.v(145) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag.v Line: 145
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dmi_jtag.v(145) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag.v Line: 145
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/src/dmi_jtag.v
+    Info (12023): Found entity 1: dmi_jtag File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_sba.v(117) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_sba.v Line: 117
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_sba.v(117) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_sba.v Line: 117
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dm_sba.v(163) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_sba.v Line: 163
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dm_sba.v(163) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_sba.v Line: 163
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/src/dm_sba.v
+    Info (12023): Found entity 1: dm_sba File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dm_sba.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dmi_jtag_tap.v(199) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag_tap.v Line: 199
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dmi_jtag_tap.v(199) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag_tap.v Line: 199
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dmi_jtag_tap.v(233) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag_tap.v Line: 233
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dmi_jtag_tap.v(233) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag_tap.v Line: 233
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/riscv-dbg/src/dmi_jtag_tap.v(299) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag_tap.v Line: 299
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/riscv-dbg/src/dmi_jtag_tap.v(299) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag_tap.v Line: 299
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/riscv-dbg/src/dmi_jtag_tap.v
+    Info (12023): Found entity 1: dmi_jtag_tap File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/riscv-dbg/src/dmi_jtag_tap.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/openpiton/riscv_peripherals.v(1796) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/openpiton/riscv_peripherals.v Line: 1796
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/openpiton/riscv_peripherals.v(1796) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/openpiton/riscv_peripherals.v Line: 1796
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/openpiton/riscv_peripherals.v
+    Info (12023): Found entity 1: riscv_peripherals File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/openpiton/riscv_peripherals.v Line: 1
+Warning (12019): Can't analyze file -- file corev_apu/openpiton/ariane_verilog_wrap.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/rv_plic/rtl/rv_plic_target.v
+    Info (12023): Found entity 1: rv_plic_target File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/rv_plic_target.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/rv_plic/rtl/rv_plic_gateway.v
+    Info (12023): Found entity 1: rv_plic_gateway File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/rv_plic_gateway.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/rv_plic/rtl/plic_regmap.v(108) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/plic_regmap.v Line: 108
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/rv_plic/rtl/plic_regmap.v(108) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/plic_regmap.v Line: 108
+Warning (10335): Unrecognized synthesis attribute "full_case" at corev_apu/rv_plic/rtl/plic_regmap.v(338) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/plic_regmap.v Line: 338
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at corev_apu/rv_plic/rtl/plic_regmap.v(338) File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/plic_regmap.v Line: 338
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/rv_plic/rtl/plic_regmap.v
+    Info (12023): Found entity 1: plic_regs_8E72A File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/plic_regmap.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/rv_plic/rtl/plic_top.v
+    Info (12023): Found entity 1: plic_top_42901 File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/rv_plic/rtl/plic_top.v Line: 1
+Warning (12019): Can't analyze file -- file corev_apu/fpga/src/axi2apb/src/axi2apb_wrap.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi2apb/src/axi2apb.v
+    Info (12023): Found entity 1: axi2apb File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi2apb/src/axi2apb.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi2apb/src/axi2apb_64_32.v
+    Info (12023): Found entity 1: axi2apb_64_32 File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi2apb/src/axi2apb_64_32.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_w_buffer.v
+    Info (12023): Found entity 1: axi_w_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi_slice/src/axi_w_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_b_buffer.v
+    Info (12023): Found entity 1: axi_b_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi_slice/src/axi_b_buffer.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_slice_wrap.v
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_slice.v
+    Info (12023): Found entity 1: axi_slice File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi_slice/src/axi_slice.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_single_slice.v
+    Info (12023): Found entity 1: axi_single_slice File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi_slice/src/axi_single_slice.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_ar_buffer.v
+    Info (12023): Found entity 1: axi_ar_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi_slice/src/axi_ar_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_r_buffer.v
+    Info (12023): Found entity 1: axi_r_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi_slice/src/axi_r_buffer.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file corev_apu/fpga/src/axi_slice/src/axi_aw_buffer.v
+    Info (12023): Found entity 1: axi_aw_buffer File: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/src/axi_slice/src/axi_aw_buffer.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/register_interface/src/apb_to_reg.v
+Info (12021): Found 0 design units, including 0 entities, in source file corev_apu/register_interface/src/reg_intf.v
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.v
+    Info (12023): Found entity 1: control_mvp File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.v Line: 3
+Info (12021): Found 0 design units, including 0 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/defs_div_sqrt_mvp.v
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/div_sqrt_mvp_wrapper.v
+    Info (12023): Found entity 1: div_sqrt_mvp_wrapper File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/div_sqrt_mvp_wrapper.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/div_sqrt_top_mvp.v
+    Info (12023): Found entity 1: div_sqrt_top_mvp File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/div_sqrt_top_mvp.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/iteration_div_sqrt_mvp.v
+    Info (12023): Found entity 1: iteration_div_sqrt_mvp File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/iteration_div_sqrt_mvp.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/norm_div_sqrt_mvp.v
+    Info (12023): Found entity 1: norm_div_sqrt_mvp File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/norm_div_sqrt_mvp.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/nrbd_nrsc_mvp.v
+    Info (12023): Found entity 1: nrbd_nrsc_mvp File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/nrbd_nrsc_mvp.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.v
+    Info (12023): Found entity 1: preprocess_mvp File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/preprocess_mvp.v Line: 3
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_cast_multi.v(105) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_cast_multi.v Line: 105
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_cast_multi.v(105) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_cast_multi.v Line: 105
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_cast_multi.v
+    Info (12023): Found entity 1: fpnew_cast_multi_0D619_08FB4 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_cast_multi.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_classifier.v
+    Info (12023): Found entity 1: fpnew_classifier File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_classifier.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_divsqrt_multi.v(335) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_divsqrt_multi.v Line: 335
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_divsqrt_multi.v(335) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_divsqrt_multi.v Line: 335
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_divsqrt_multi.v(415) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_divsqrt_multi.v Line: 415
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_divsqrt_multi.v(415) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_divsqrt_multi.v Line: 415
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_divsqrt_multi.v
+    Info (12023): Found entity 1: fpnew_divsqrt_multi_CCEC6_ACD03 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_divsqrt_multi.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_fma_multi.v(530) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_fma_multi.v Line: 530
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_fma_multi.v(530) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_fma_multi.v Line: 530
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_fma_multi.v
+    Info (12023): Found entity 1: fpnew_fma_multi_8F047_F0EFF File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_fma_multi.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_fma.v(372) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_fma.v Line: 372
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_fma.v(372) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_fma.v Line: 372
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_fma.v
+    Info (12023): Found entity 1: fpnew_fma_9038D_CD718 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_fma.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_noncomp.v(376) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 376
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_noncomp.v(376) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 376
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_noncomp.v(425) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 425
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_noncomp.v(425) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 425
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_noncomp.v(460) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 460
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_noncomp.v(460) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 460
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_noncomp.v(540) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 540
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_noncomp.v(540) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 540
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_noncomp.v
+    Info (12023): Found entity 1: fpnew_noncomp_E1895_77336 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_noncomp.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_opgroup_block.v(67) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_block.v Line: 67
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_opgroup_block.v(67) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_block.v Line: 67
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_opgroup_block.v
+    Info (12023): Found entity 1: fpnew_opgroup_block_D3AB0_1C1E0 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_block.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_opgroup_fmt_slice.v(58) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_fmt_slice.v Line: 58
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_opgroup_fmt_slice.v(58) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_fmt_slice.v Line: 58
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_opgroup_fmt_slice.v
+    Info (12023): Found entity 1: fpnew_opgroup_fmt_slice_B2D7F_8C3BC File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_fmt_slice.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_opgroup_multifmt_slice.v(58) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_multifmt_slice.v Line: 58
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_opgroup_multifmt_slice.v(58) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_multifmt_slice.v Line: 58
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_opgroup_multifmt_slice.v(217) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_multifmt_slice.v Line: 217
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_opgroup_multifmt_slice.v(217) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_multifmt_slice.v Line: 217
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_opgroup_multifmt_slice.v
+    Info (12023): Found entity 1: fpnew_opgroup_multifmt_slice_983D9_76A82 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_opgroup_multifmt_slice.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_rounding.v(39) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_rounding.v Line: 39
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_rounding.v(39) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_rounding.v Line: 39
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_rounding.v(42) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_rounding.v Line: 42
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_rounding.v(42) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_rounding.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_rounding.v
+    Info (12023): Found entity 1: fpnew_rounding File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_rounding.v Line: 1
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_top.v(228) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_top.v Line: 228
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_top.v(228) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_top.v Line: 228
+Warning (10335): Unrecognized synthesis attribute "full_case" at core/cvfpu/src/fpnew_top.v(277) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_top.v Line: 277
+Warning (10335): Unrecognized synthesis attribute "parallel_case" at core/cvfpu/src/fpnew_top.v(277) File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_top.v Line: 277
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvfpu/src/fpnew_top.v
+    Info (12023): Found entity 1: fpnew_top_D81B0_8D9C0 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpnew_top.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/pmp/src/pmp.v
+    Info (12023): Found entity 1: pmp File: /tools/C/eegr-463/idris.somoye/test_clone/core/pmp/src/pmp.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/pmp/src/pmp_entry.v
+    Info (12023): Found entity 1: pmp_entry File: /tools/C/eegr-463/idris.somoye/test_clone/core/pmp/src/pmp_entry.v Line: 1
+Warning (12019): Can't analyze file -- file common/local/util/instr_tracer.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvxif_example/cvxif_example_coprocessor.v
+    Info (12023): Found entity 1: cvxif_example_coprocessor_093E4_50DC6 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvxif_example/cvxif_example_coprocessor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvxif_example/instr_decoder.v
+    Info (12023): Found entity 1: instr_decoder_B6FAE_B0A02 File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvxif_example/instr_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/counter.v
+    Info (12023): Found entity 1: counter File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vendor/pulp-platform/common_cells/src/delta_counter.v
+    Info (12023): Found entity 1: delta_counter File: /tools/C/eegr-463/idris.somoye/test_clone/vendor/pulp-platform/common_cells/src/delta_counter.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file core/cvxif_fu.v
+    Info (12023): Found entity 1: cvxif_fu_2640F_4CE1F File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvxif_fu.v Line: 1
+Warning (10037): Verilog HDL or VHDL warning at control_mvp.v(2906): conditional expression evaluates to a constant File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.v Line: 2906
+Warning (10037): Verilog HDL or VHDL warning at control_mvp.v(3075): conditional expression evaluates to a constant File: /tools/C/eegr-463/idris.somoye/test_clone/core/cvfpu/src/fpu_div_sqrt_mvp/hdl/control_mvp.v Line: 3075
+Error (10932): SystemVerilog error at issue_stage.v(345): can't resolve implicit port connection(s) to instance "i_scoreboard" without a module declaration or an extern equivalent File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_stage.v Line: 345
+Error (10932): SystemVerilog error at issue_read_operands.v(1108): can't resolve implicit port connection(s) to instance "i_ariane_regfile_fpga" without a module declaration or an extern equivalent File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 1108
+Error (10932): SystemVerilog error at issue_read_operands.v(1178): can't resolve implicit port connection(s) to instance "i_ariane_fp_regfile_fpga" without a module declaration or an extern equivalent File: /tools/C/eegr-463/idris.somoye/test_clone/core/issue_read_operands.v Line: 1178
+Info (144001): Generated suppressed messages file /tools/C/eegr-463/idris.somoye/test_clone/output_files/flat_ariane_cyclone.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 306 warnings
+    Error: Peak virtual memory: 7563 megabytes
+    Error: Processing ended: Sat Sep 21 22:44:13 2024
+    Error: Elapsed time: 00:00:52
+    Error: Total CPU time (on all processors): 00:01:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /tools/C/eegr-463/idris.somoye/test_clone/output_files/flat_ariane_cyclone.map.smsg.
+
+

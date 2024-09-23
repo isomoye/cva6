@@ -14,8 +14,9 @@ module cva6_fifo_v3 #(
     parameter bit FALL_THROUGH = 1'b0,  // fifo is in fall-through mode
     parameter int unsigned DATA_WIDTH = 32,  // default data width if the fifo is of type logic
     parameter int unsigned DEPTH = 8,  // depth can be arbitrary from 0 to 2**32
-    parameter type dtype = logic [DATA_WIDTH-1:0],
+    // parameter type logic = logic [DATA_WIDTH-1:0],
     parameter bit FPGA_EN = 1'b0,
+    parameter int unsigned dtype = 0,
     // DO NOT OVERWRITE THIS PARAMETER
     parameter int unsigned ADDR_DEPTH = (DEPTH > 1) ? $clog2(DEPTH) : 1
 ) (
@@ -28,10 +29,10 @@ module cva6_fifo_v3 #(
     output logic                  empty_o,     // queue is empty
     output logic [ADDR_DEPTH-1:0] usage_o,     // fill pointer
     // as long as the queue is not full we can push new data
-    input  dtype                  data_i,      // data to push into the queue
+    input  logic                  data_i,      // data to push into the queue
     input  logic                  push_i,      // data is valid and can be pushed to the queue
     // as long as the queue is not empty we can pop new elements
-    output dtype                  data_o,      // output data
+    output logic                  data_o,      // output data
     input  logic                  pop_i        // pop head from queue
 );
   // local parameter
@@ -45,14 +46,14 @@ module cva6_fifo_v3 #(
   // this integer will be truncated by the synthesis tool
   logic [ADDR_DEPTH:0] status_cnt_n, status_cnt_q;
   // actual memory
-  dtype [FifoDepth - 1:0] mem_n, mem_q;
+  logic [FifoDepth - 1:0] mem_n, mem_q;
 
   // fifo ram signals for fpga target
   logic fifo_ram_we;
   logic [ADDR_DEPTH-1:0] fifo_ram_read_address;
   logic [ADDR_DEPTH-1:0] fifo_ram_write_address;
-  logic [$bits(dtype)-1:0] fifo_ram_wdata;
-  logic [$bits(dtype)-1:0] fifo_ram_rdata;
+  logic [$bits(logic)-1:0] fifo_ram_wdata;
+  logic [$bits(logic)-1:0] fifo_ram_rdata;
 
   assign usage_o = status_cnt_q[ADDR_DEPTH-1:0];
 
@@ -149,7 +150,7 @@ module cva6_fifo_v3 #(
     AsyncDpRam #(
         .ADDR_WIDTH(ADDR_DEPTH),
         .DATA_DEPTH(DEPTH),
-        .DATA_WIDTH($bits(dtype))
+        .DATA_WIDTH($bits(logic))
     ) fifo_ram (
         .Clk_CI   (clk_i),
         .WrEn_SI  (fifo_ram_we),

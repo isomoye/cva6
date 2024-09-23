@@ -12,7 +12,6 @@
 //          Nils Wistoff, ETH Zurich
 // Date: 20.11.2020
 // Description: Functional unit that dispatches CVA6 instructions to accelerators.
-
 module acc_dispatcher
   import ariane_pkg::*;
   import riscv::*;
@@ -109,6 +108,23 @@ module acc_dispatcher
   `include "common_cells/registers.svh"
 
   import cf_math_pkg::idx_width;
+
+  parameter type default_acc_resp_t = struct packed {
+    logic                             req_ready;
+    logic                             resp_valid;
+    logic [CVA6Cfg.XLEN-1:0]          result;
+    logic [CVA6Cfg.TRANS_ID_BITS-1:0] trans_id;
+    logic                             error;
+    // Metadata
+    logic                             store_pending;
+    logic                             store_complete;
+    logic                             load_complete;
+    logic [4:0]                       fflags;
+    logic                             fflags_valid;
+    // Invalidation interface
+    logic                             inval_valid;
+    logic [63:0]                      inval_addr;
+  };
 
   /***********************
    *  Common signals     *
@@ -219,7 +235,7 @@ module acc_dispatcher
     end
 
     // An accelerator instruction was issued.
-    if (acc_req_o.req_valid) insn_ready_d[acc_req_o.trans_id] = 1'b0;
+    if (cast_acc_req_o.req_valid) insn_ready_d[cast_acc_req_o.trans_id] = 1'b0;
   end : p_non_speculative_ff
 
   /*************************
@@ -242,18 +258,24 @@ module acc_dispatcher
       .valid_i   (acc_req_valid),
       .ready_o   (acc_req_ready),
       .data_o    (acc_req_int),
-      .valid_o   (acc_req_o.req_valid),
-      .ready_i   (acc_resp_i.req_ready)
+      .valid_o   (cast_acc_req_o.req_valid),
+      .ready_i   (cast_acc_resp_i.req_ready)
   );
+  accelerator_req_t cast_acc_req_o;
+  assign acc_req_o = cast_acc_req_o;
+  
+  assign cast_acc_req_o.insn          = acc_req_int.insn;
+  assign cast_acc_req_o.rs1           = acc_req_int.rs1;
+  assign cast_acc_req_o.rs2           = acc_req_int.rs2;
+  assign cast_acc_req_o.frm           = acc_req_int.frm;
+  assign cast_acc_req_o.trans_id      = acc_req_int.trans_id;
+  assign cast_acc_req_o.store_pending = !acc_no_st_pending_i && acc_cons_en_i;
+  assign cast_acc_req_o.acc_cons_en   = acc_cons_en_i;
+  assign cast_acc_req_o.inval_ready   = inval_ready_i;
 
-  assign acc_req_o.insn          = acc_req_int.insn;
-  assign acc_req_o.rs1           = acc_req_int.rs1;
-  assign acc_req_o.rs2           = acc_req_int.rs2;
-  assign acc_req_o.frm           = acc_req_int.frm;
-  assign acc_req_o.trans_id      = acc_req_int.trans_id;
-  assign acc_req_o.store_pending = !acc_no_st_pending_i && acc_cons_en_i;
-  assign acc_req_o.acc_cons_en   = acc_cons_en_i;
-  assign acc_req_o.inval_ready   = inval_ready_i;
+
+  default_acc_resp_t cast_acc_resp_i;
+  assign cast_acc_resp_i = acc_resp_i;
 
   always_comb begin : accelerator_req_dispatcher
     // Do not fetch from the instruction queue
@@ -298,29 +320,29 @@ module acc_dispatcher
   logic acc_st_disp;
 
   // Unpack the accelerator response
-  assign acc_trans_id_o = acc_resp_i.trans_id;
-  assign acc_result_o = acc_resp_i.result;
-  assign acc_valid_o = acc_resp_i.resp_valid;
+  assign acc_trans_id_o = cast_acc_resp_i.trans_id;
+  assign acc_result_o = cast_acc_resp_i.result;
+  assign acc_valid_o = cast_acc_resp_i.resp_valid;
   assign acc_exception_o = '{
           cause: riscv::ILLEGAL_INSTR,
           tval : '0,
           tval2 : '0,
           tinst : '0,
           gva : '0,
-          valid: acc_resp_i.error
+          valid: cast_acc_resp_i.error
       };
-  assign acc_fflags_valid_o = acc_resp_i.fflags_valid;
-  assign acc_fflags_o = acc_resp_i.fflags;
+  assign acc_fflags_valid_o = cast_acc_resp_i.fflags_valid;
+  assign acc_fflags_o = cast_acc_resp_i.fflags;
   // Always ready to receive responses
-  assign acc_req_o.resp_ready = 1'b1;
+  assign cast_acc_req_o.resp_ready = 1'b1;
 
   // Signal dispatched load/store to issue stage
   assign acc_ld_disp = acc_req_valid && (acc_insn_queue_o.operation == ACCEL_OP_LOAD);
   assign acc_st_disp = acc_req_valid && (acc_insn_queue_o.operation == ACCEL_OP_STORE);
 
   // Cache invalidation
-  assign inval_valid_o = acc_resp_i.inval_valid;
-  assign inval_addr_o = acc_resp_i.inval_addr;
+  assign inval_valid_o = cast_acc_resp_i.inval_valid;
+  assign inval_addr_o = cast_acc_resp_i.inval_addr;
 
   /**************************
    *  Accelerator commit    *
@@ -358,7 +380,7 @@ module acc_dispatcher
   `FF(wait_acc_store_q, wait_acc_store_d, '0)
 
   // Set on store barrier. Clear when no store is pending.
-  assign wait_acc_store_d = (wait_acc_store_q | commit_st_barrier_i) & acc_resp_i.store_pending;
+  assign wait_acc_store_d = (wait_acc_store_q | commit_st_barrier_i) & cast_acc_resp_i.store_pending;
   assign ctrl_halt_o      = wait_acc_store_q;
 
   /**************************
@@ -397,9 +419,9 @@ module acc_dispatcher
       .clk_i     (clk_i),
       .rst_ni    (rst_ni),
       .clear_i   (1'b0),
-      .en_i      (acc_ld_disp ^ acc_resp_i.load_complete),
+      .en_i      (acc_ld_disp ^ cast_acc_resp_i.load_complete),
       .load_i    (1'b0),
-      .down_i    (acc_resp_i.load_complete),
+      .down_i    (cast_acc_resp_i.load_complete),
       .d_i       ('0),
       .q_o       (acc_disp_loads_pending),
       .overflow_o(acc_disp_loads_overflow)
@@ -442,9 +464,9 @@ module acc_dispatcher
       .clk_i     (clk_i),
       .rst_ni    (rst_ni),
       .clear_i   (1'b0),
-      .en_i      (acc_st_disp ^ acc_resp_i.store_complete),
+      .en_i      (acc_st_disp ^ cast_acc_resp_i.store_complete),
       .load_i    (1'b0),
-      .down_i    (acc_resp_i.store_complete),
+      .down_i    (cast_acc_resp_i.store_complete),
       .d_i       ('0),
       .q_o       (acc_disp_stores_pending),
       .overflow_o(acc_disp_stores_overflow)

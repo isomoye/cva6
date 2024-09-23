@@ -712,7 +712,8 @@ package riscv;
     CSR_HPM_COUNTER_28H  = 12'hC9C,  // reserved
     CSR_HPM_COUNTER_29H  = 12'hC9D,  // reserved
     CSR_HPM_COUNTER_30H  = 12'hC9E,  // reserved
-    CSR_HPM_COUNTER_31H  = 12'hC9F   // reserved
+    CSR_HPM_COUNTER_31H  = 12'hC9F,   // reserved
+    CSR_C3_ENABLE_0      = 12'hD00
   } csr_reg_t;
 
   localparam logic [63:0] SSTATUS_UIE = 'h00000001;
@@ -952,8 +953,16 @@ package riscv;
   function automatic csr_t convert_vs_access_csr(csr_t csr_addr, logic v);
     csr_t ret;
     ret = csr_addr;
-    unique case (csr_addr.address) inside
-      [CSR_SSTATUS : CSR_STVEC], [CSR_SSCRATCH : CSR_SATP]: begin
+    unique case (csr_addr.address)
+        CSR_SSTATUS,
+        CSR_SIE    ,
+        CSR_STVEC  ,
+        CSR_SSCRATCH,
+        CSR_SEPC    ,
+        CSR_SCAUSE  ,
+        CSR_STVAL   ,
+        CSR_SIP     ,
+        CSR_SATP    : begin
         if (v) begin
           ret.csr_decode.priv_lvl = PRIV_LVL_HS;
         end

@@ -275,11 +275,13 @@ interface AXI_ROUTING_RULES #(
   parameter int NUM_RULES  = -1
 );
 
-  struct packed {
+  typedef struct packed {
     logic enabled;
     logic [AXI_ADDR_WIDTH-1:0] mask;
     logic [AXI_ADDR_WIDTH-1:0] base;
-  } [NUM_RULES-1:0] rules [NUM_SLAVE];
+  } rules_t;
+  
+  rules_t [NUM_RULES-1:0] rules [NUM_SLAVE];
 
   modport xbar(input rules);
   modport cfg(output rules);
