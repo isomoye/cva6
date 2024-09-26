@@ -2,4 +2,4 @@
  export SPIKE_INSTALL_DIR=/tools/m_spike
  export RISCV=/tools/riscv
  export PATH=$VERILATOR_INSTALL_DIR/bin:$PATH
- scl enable devtoolset-11 bash
+ scl enable devtoolset-10 bash

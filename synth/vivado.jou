@@ -2,27 +2,16 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sat Sep 21 00:49:37 2024
-# Process ID: 46532
+# Start of session at: Thu Sep 26 17:03:17 2024
+# Process ID: 81036
 # Current directory: /tools/C/eegr-463/idris.somoye/test_clone/synth
-# Command line: vivado ../corev_apu/fpga/ariane.xpr
+# Command line: vivado
 # Log file: /tools/C/eegr-463/idris.somoye/test_clone/synth/vivado.log
 # Journal file: /tools/C/eegr-463/idris.somoye/test_clone/synth/vivado.jou
 # Running On: capc-cl1-1.msucap.com, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 32, Host memory: 1081420 MB
 #-----------------------------------------------------------
 start_gui
-open_project ../corev_apu/fpga/ariane.xpr
-update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top ariane [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-set_property board_part digilentinc.com:gzu_5ev:part0:1.1 [current_project]
-launch_runs synth_1 -jobs 64
-wait_on_run synth_1
-add_files -norecurse /tools/C/eegr-463/idris.somoye/test_clone/core/include/cvxif_types.svh
+open_project /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.xpr
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 64

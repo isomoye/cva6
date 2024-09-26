@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sat Sep 21 00:56:58 2024
-# Process ID: 48878
+# Start of session at: Thu Sep 26 17:04:19 2024
+# Process ID: 82011
 # Current directory: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.runs/synth_1
 # Command line: vivado -log ariane.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ariane.tcl
 # Log file: /tools/C/eegr-463/idris.somoye/test_clone/corev_apu/fpga/ariane.runs/synth_1/ariane.vds
@@ -18,10 +18,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu5ev
 INFO: [Device 21-403] Loading part xczu5ev-sfvc784-1-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 48915
+INFO: [Synth 8-7075] Helper process launched with PID 82107
+WARNING: [Synth 8-9887] parameter declaration becomes local in 'acc_dispatcher' with formal parameter declaration list [/tools/C/eegr-463/idris.somoye/test_clone/core/acc_dispatcher.sv:127]
 WARNING: [Synth 8-9887] parameter declaration becomes local in 'miss_handler' with formal parameter declaration list [/tools/C/eegr-463/idris.somoye/test_clone/core/cache_subsystem/miss_handler.sv:72]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3374.168 ; gain = 217.785 ; free physical = 453385 ; free virtual = 989680
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 3376.066 ; gain = 219.754 ; free physical = 306001 ; free virtual = 992839
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'ariane' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:17]
 INFO: [Synth 8-6157] synthesizing module 'cva6' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6.sv:18]
@@ -1436,11 +1437,11 @@ ERROR: [Synth 8-6156] failed synthesizing module 'std_cache_subsystem' [/tools/C
 ERROR: [Synth 8-6156] failed synthesizing module 'cva6' [/tools/C/eegr-463/idris.somoye/test_clone/core/cva6.sv:18]
 ERROR: [Synth 8-6156] failed synthesizing module 'ariane' [/tools/C/eegr-463/idris.somoye/test_clone/corev_apu/src/ariane.sv:17]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3472.949 ; gain = 316.566 ; free physical = 454322 ; free virtual = 990616
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3472.879 ; gain = 316.566 ; free physical = 306939 ; free virtual = 993777
 ---------------------------------------------------------------------------------
 RTL Elaboration failed
 INFO: [Common 17-83] Releasing license: Synthesis
-11 Infos, 8 Warnings, 0 Critical Warnings and 7 Errors encountered.
+11 Infos, 9 Warnings, 0 Critical Warnings and 7 Errors encountered.
 synth_design failed
 ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Sat Sep 21 00:57:17 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 26 17:04:38 2024...
